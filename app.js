@@ -443,8 +443,9 @@ async function loadMapPins() {
   if (!sb) return;
   if (status) status.textContent = "Loading locations…";
   try {
-    const { data, error } = await sb.from("locations")
-      .select("*").order("recorded_at", { ascending: false }).limit(2000);
+    const q = sb.from("locations").select("*").order("recorded_at", { ascending: false }).limit(2000);
+    const timeout = new Promise((_, rej) => setTimeout(() => rej(new Error("Server didn't respond")), 12000));
+    const { data, error } = await Promise.race([q, timeout]);
     if (error) throw error;
 
     // keep only the newest fix per animal (or per device if unmapped)
@@ -482,7 +483,9 @@ async function loadMapPins() {
 
     if (status) status.textContent = `${latest.length} tracked animal${latest.length > 1 ? "s" : ""} · updated ${new Date().toLocaleTimeString()}`;
   } catch (e) {
-    if (status) status.textContent = "Couldn't load locations: " + e.message;
+    if (status) status.textContent = /respond|timed out|Failed to fetch|NetworkError/i.test(e.message || "")
+      ? "Couldn't reach the server — tap Refresh to try again."
+      : "Couldn't load locations: " + e.message;
   }
 }
 
