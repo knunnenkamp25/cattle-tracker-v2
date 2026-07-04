@@ -20,6 +20,7 @@ const SUPABASE_URL = "https://pnileizziwrhwefnzicz.supabase.co";
 const HOLO_KEY  = process.env.HOLOGRAM_API_KEY;
 const SB_KEY    = process.env.SUPABASE_SERVICE_KEY;
 const DEVICE_ID = process.env.HOLOGRAM_DEVICE_ID || "";
+const ORG_ID    = process.env.HOLOGRAM_ORG_ID || "107673";   // the org that owns the device
 const TOPIC     = "gps";
 
 function need(v, name) { if (!v) { console.error("Missing env: " + name); process.exit(1); } }
@@ -39,7 +40,7 @@ const sb = { apikey: SB_KEY, Authorization: `Bearer ${SB_KEY}`, "content-type": 
   // 2) Fetch recent messages from Hologram, after the watermark id.
   //    We DON'T filter by topic here (that filter proved unreliable); instead
   //    we keep only messages that decode to valid coordinates, below.
-  let url = `https://dashboard.hologram.io/api/1/csr/rdm?limit=100`;
+  let url = `https://dashboard.hologram.io/api/1/csr/rdm?orgid=${ORG_ID}&limit=100`;
   if (watermark) url += `&startafter=${watermark}`;
   // NOTE: deviceid filter intentionally omitted for now (one device on the account).
   const auth = "Basic " + Buffer.from("apikey:" + HOLO_KEY).toString("base64");
