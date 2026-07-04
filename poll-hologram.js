@@ -36,15 +36,19 @@ const sb = { apikey: SB_KEY, Authorization: `Bearer ${SB_KEY}`, "content-type": 
   const wmRows = await wmRes.json();
   const watermark = (Array.isArray(wmRows) && wmRows[0] && wmRows[0].source_id) || 0;
 
-  // 2) Fetch new messages from Hologram (topic "gps", after the watermark id).
-  let url = `https://dashboard.hologram.io/api/1/csr/rdm?topicname=${TOPIC}&limit=100&startafter=${watermark}`;
-  if (DEVICE_ID) url += `&deviceid=${encodeURIComponent(DEVICE_ID)}`;
+  // 2) Fetch recent messages from Hologram, after the watermark id.
+  //    We DON'T filter by topic here (that filter proved unreliable); instead
+  //    we keep only messages that decode to valid coordinates, below.
+  let url = `https://dashboard.hologram.io/api/1/csr/rdm?limit=100`;
+  if (watermark) url += `&startafter=${watermark}`;
+  // NOTE: deviceid filter intentionally omitted for now (one device on the account).
   const auth = "Basic " + Buffer.from("apikey:" + HOLO_KEY).toString("base64");
   const hr = await fetch(url, { headers: { Authorization: auth } });
   if (!hr.ok) { console.error("Hologram API error:", hr.status, await hr.text()); process.exit(1); }
   const hj = await hr.json();
   const msgs = (hj && hj.data) || [];
   console.log(`Hologram returned ${msgs.length} message(s) after id ${watermark}.`);
+  if (msgs.length) console.log("First record keys:", Object.keys(msgs[0]).join(", "), "| tags:", JSON.stringify(msgs[0].tags));
 
   // 3) Parse each message: the record's `data` is a JSON string whose inner
   //    `data` field is the base64 device payload ("lat,lng,battery").
