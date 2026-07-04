@@ -382,13 +382,108 @@ async function syncPillClicked() {
 function switchTab(tab) {
   CURRENT_TAB = tab;
   $$(".tab").forEach(b => b.classList.toggle("active", b.dataset.tab === tab));
-  const titles = { dashboard: "Dashboard", add: "Add Calf", herd: "The Herd", market: "Market & News" };
+  const titles = { dashboard: "Dashboard", add: "Add Calf", herd: "The Herd", map: "Herd Map", market: "Market & News" };
   $("#topbar-title").textContent = titles[tab] || "";
   view().scrollTop = 0; window.scrollTo(0, 0);
   if (tab === "dashboard") renderDashboard();
   else if (tab === "add") renderAddForm();
   else if (tab === "herd") renderHerd();
+  else if (tab === "map") renderMap();
   else if (tab === "market") renderMarket();
+}
+
+/* ============================================================
+   HERD MAP  (live GPS locations)
+   ============================================================ */
+let herdMap = null, herdMarkers = [];
+
+function ensureMapIcons() {
+  if (window.L && L.Icon && L.Icon.Default) {
+    L.Icon.Default.mergeOptions({
+      iconRetinaUrl: "https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/images/marker-icon-2x.png",
+      iconUrl: "https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/images/marker-icon.png",
+      shadowUrl: "https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/images/marker-shadow.png",
+    });
+  }
+}
+
+function renderMap() {
+  view().innerHTML = `
+    <div class="row-between" style="margin-bottom:8px">
+      <div class="muted" id="map-status">Loading…</div>
+      <button class="btn btn-sm" id="map-refresh">Refresh</button>
+    </div>
+    <div id="map" style="height:68vh;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:var(--green-l)"></div>
+    <p class="fab-note" style="margin-top:8px">Latest known position per tracked animal. Tap a pin to open its record. Needs a connection.</p>`;
+  $("#map-refresh").addEventListener("click", loadMapPins);
+
+  if (!window.L) { $("#map-status").textContent = "Map library didn't load — check your connection and Refresh."; return; }
+  ensureMapIcons();
+
+  if (herdMap) { herdMap.remove(); herdMap = null; herdMarkers = []; }
+  herdMap = L.map("map");
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19, attribution: "&copy; OpenStreetMap contributors",
+  }).addTo(herdMap);
+  herdMap.setView([37.5, -78.6], 7);                 // default view over Virginia until we have fixes
+  setTimeout(() => herdMap && herdMap.invalidateSize(), 120);  // fix tile layout after container sizes
+
+  herdMap.on("popupopen", (e) => {
+    const link = e.popup.getElement().querySelector(".map-open");
+    if (link) link.addEventListener("click", (ev) => { ev.preventDefault(); openProfile(link.dataset.open); });
+  });
+
+  loadMapPins();
+}
+
+async function loadMapPins() {
+  const status = $("#map-status");
+  if (!herdMap) return;
+  if (!OFF.isOnline()) { if (status) status.textContent = "Offline — the map needs a connection."; return; }
+  if (!sb) return;
+  if (status) status.textContent = "Loading locations…";
+  try {
+    const { data, error } = await sb.from("locations")
+      .select("*").order("recorded_at", { ascending: false }).limit(2000);
+    if (error) throw error;
+
+    // keep only the newest fix per animal (or per device if unmapped)
+    const seen = new Set(), latest = [];
+    (data || []).forEach(row => {
+      const key = row.animal_id || ("dev:" + row.device_id);
+      if (!seen.has(key)) { seen.add(key); latest.push(row); }
+    });
+
+    herdMarkers.forEach(m => herdMap.removeLayer(m));
+    herdMarkers = [];
+
+    if (!latest.length) {
+      if (status) status.textContent = "No location fixes yet — pins appear once a tracker reports in.";
+      return;
+    }
+
+    const bounds = [];
+    latest.forEach(row => {
+      const a = row.animal_id ? ANIMALS.find(x => x.id === row.animal_id) : null;
+      const label = a ? (a.tag_number || a.name || "Animal") : ("Device " + row.device_id);
+      const when = row.recorded_at ? new Date(row.recorded_at).toLocaleString() : "";
+      const batt = (row.battery != null && row.battery !== "") ? ` &middot; \u{1F50B} ${esc(String(row.battery))}` : "";
+      const m = L.marker([row.lat, row.lng]).addTo(herdMap);
+      m.bindPopup(
+        `<b>${esc(label)}</b><br><span style="font-size:12px;color:#555">${esc(when)}${batt}</span>` +
+        (a ? `<br><a href="#" data-open="${a.id}" class="map-open">Open record &rsaquo;</a>` : "")
+      );
+      herdMarkers.push(m);
+      bounds.push([row.lat, row.lng]);
+    });
+
+    if (bounds.length === 1) herdMap.setView(bounds[0], 15);
+    else herdMap.fitBounds(bounds, { padding: [40, 40], maxZoom: 16 });
+
+    if (status) status.textContent = `${latest.length} tracked animal${latest.length > 1 ? "s" : ""} · updated ${new Date().toLocaleTimeString()}`;
+  } catch (e) {
+    if (status) status.textContent = "Couldn't load locations: " + e.message;
+  }
 }
 
 /* ============================================================

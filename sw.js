@@ -3,13 +3,15 @@
    NOTE: V2 uses its own cache prefix so it can NEVER delete V1's cache
    on the shared github.io origin. */
 const CACHE_PREFIX = "tracker-v2-shell-";
-const CACHE = CACHE_PREFIX + "v1";
+const CACHE = CACHE_PREFIX + "v2";
 const SHELL = [
   "./", "./index.html", "./styles.css", "./config.js", "./offline.js", "./app.js",
   "./manifest.webmanifest", "./icon-180.png", "./icon-512.png",
   "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2",
   "https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js",
   "https://cdn.jsdelivr.net/npm/qrcode@1.5.4/build/qrcode.min.js",
+  "https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js",
+  "https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css",
 ];
 
 self.addEventListener("install", (e) => {
