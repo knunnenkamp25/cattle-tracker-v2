@@ -519,6 +519,38 @@ async function loadHistory(animalId, days) {
   }
 }
 
+// ---- Down-cow alert setting + banner ----
+async function loadAlertSetting() {
+  if (!sb) return;
+  try {
+    const { data } = await sb.from("settings").select("value").eq("key", "down_cow_hours").maybeSingle();
+    const sel = $("#down-hours");
+    if (sel && data && data.value != null) sel.value = String(data.value);
+  } catch (e) { /* ignore */ }
+}
+async function saveAlertSetting(val) {
+  if (!sb) return;
+  try { await sb.from("settings").upsert({ key: "down_cow_hours", value: String(val), updated_at: new Date().toISOString() }); } catch (e) {}
+}
+async function loadDownAlerts() {
+  const el = $("#down-banner");
+  if (!el || !sb) return;
+  try {
+    const { data } = await sb.from("alerts").select("*").eq("type", "down_cow").eq("status", "open").order("opened_at", { ascending: false });
+    const rows = data || [];
+    if (!rows.length) { el.style.display = "none"; el.innerHTML = ""; return; }
+    const item = (r) => {
+      const a = ANIMALS.find(x => x.id === r.animal_id);
+      const nm = a ? (a.tag_number ? ("Tag " + a.tag_number) : (a.name || "Animal")) : ("Device " + (r.device_id || ""));
+      const link = a ? ` <a href="#" data-open="${a.id}" class="alert-open" style="color:#7a1c14;text-decoration:underline">view</a>` : "";
+      return `<li>${esc(nm)} — ${esc(r.detail || "no movement")}${link}</li>`;
+    };
+    el.style.display = "block";
+    el.innerHTML = `<b>⚠ Possibly down (${rows.length}):</b><ul style="margin:4px 0 0;padding-left:18px">${rows.map(item).join("")}</ul>`;
+    el.querySelectorAll(".alert-open").forEach(a => a.addEventListener("click", (ev) => { ev.preventDefault(); openProfile(a.dataset.open); }));
+  } catch (e) { el.style.display = "none"; }
+}
+
 function ensureMapIcons() {
   if (window.L && L.Icon && L.Icon.Default) {
     L.Icon.Default.mergeOptions({
@@ -547,7 +579,18 @@ function renderMap() {
         <button class="btn btn-sm" data-range="30">Month</button>
       </span>
     </div>
-    <div id="map" style="height:62vh;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:var(--green-l)"></div>
+    <div style="display:flex;gap:6px;margin-bottom:8px;flex-wrap:wrap;align-items:center">
+      <label style="font-size:13px;color:var(--muted,#666)">Down-cow alert if no movement for</label>
+      <select id="down-hours" style="padding:6px 8px;border:1px solid var(--line,#ccc);border-radius:8px">
+        <option value="0">Off</option>
+        <option value="6">6 hours</option>
+        <option value="12">12 hours</option>
+        <option value="24">24 hours</option>
+        <option value="48">48 hours</option>
+      </select>
+    </div>
+    <div id="down-banner" style="display:none;background:#fdecea;border:1px solid #f5c2bd;color:#7a1c14;border-radius:8px;padding:8px 10px;margin-bottom:8px;font-size:13px"></div>
+    <div id="map" style="height:60vh;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:var(--green-l)"></div>
     <p class="fab-note" style="margin-top:8px">Green pins = latest position; red pins = outside the fence. Pick a cow + a time window above to trace where it has been. Draw the pasture fence with the polygon tool (top-right ▷) — click each corner, then the first point to close it.</p>`;
   $("#map-refresh").addEventListener("click", refreshMap);
   $("#hist-animal").addEventListener("change", (e) => { HIST.animalId = e.target.value; refreshMap(); });
@@ -558,6 +601,9 @@ function renderMap() {
     if (!HIST.animalId) { $("#map-status").textContent = "Pick a cow above to trace its path for this window."; return; }
     refreshMap();
   }));
+  $("#down-hours").addEventListener("change", (e) => saveAlertSetting(e.target.value));
+  loadAlertSetting();
+  loadDownAlerts();
 
   if (!window.L) { $("#map-status").textContent = "Map library didn't load — check your connection and Refresh."; return; }
   ensureMapIcons();
