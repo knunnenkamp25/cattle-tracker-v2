@@ -509,7 +509,7 @@ async function loadHistory(animalId, days) {
       L.circleMarker([r.lat, r.lng], {
         radius: last ? 7 : 4, weight: 1, color: "#fff",
         fillColor: last ? "#d9342b" : (first ? "#8a968c" : "#2e5a34"), fillOpacity: 1,
-      }).bindPopup(`<b>${esc(name)}</b><br><span style="font-size:12px;color:#555">${esc(new Date(r.recorded_at).toLocaleString())}${last ? " · latest" : first ? " · start" : ""}</span>`).addTo(histLayer);
+      }).bindPopup(`<b>${esc(name)}</b><br><span style="font-size:12px;color:#555">${esc(new Date(r.recorded_at).toLocaleString())}${last ? " · latest" : first ? " · start" : ""}</span><br><a href="#" data-open="${animalId}" class="map-open">Open record &rsaquo;</a>`).addTo(histLayer);
     });
     herdMap.fitBounds(histLayer.getBounds(), { padding: [40, 40], maxZoom: 16 });
     const label = days === 1 ? "past day" : days === 7 ? "past week" : days === 30 ? "past month" : `past ${days} days`;
