@@ -396,6 +396,74 @@ function switchTab(tab) {
    HERD MAP  (live GPS locations)
    ============================================================ */
 let herdMap = null, herdMarkers = [];
+let fenceLayer = null, GEOFENCE_RING = null, GEOFENCE_ID = null;
+
+// Ray-casting point-in-polygon. ring = [[lng,lat], ...].
+function pointInRing(lng, lat, ring) {
+  let inside = false;
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+    const xi = ring[i][0], yi = ring[i][1], xj = ring[j][0], yj = ring[j][1];
+    const denom = (yj - yi) || 1e-12;
+    if (((yi > lat) !== (yj > lat)) && (lng < (xj - xi) * (lat - yi) / denom + xi)) inside = !inside;
+  }
+  return inside;
+}
+function isOutsideFence(lat, lng) {
+  return GEOFENCE_RING ? !pointInRing(lng, lat, GEOFENCE_RING) : false;
+}
+function redDotIcon() {
+  return L.divIcon({
+    className: "",
+    html: '<div style="width:16px;height:16px;border-radius:50%;background:#d9342b;border:2px solid #fff;box-shadow:0 0 0 2px #d9342b"></div>',
+    iconSize: [16, 16], iconAnchor: [8, 8], popupAnchor: [0, -8],
+  });
+}
+function ringFromGeoJSON(gj) {
+  if (!gj) return null;
+  const c = (gj.geometry ? gj.geometry.coordinates : gj.coordinates);
+  return (c && c[0]) ? c[0] : null;   // outer ring, [ [lng,lat], ... ]
+}
+
+async function loadGeofence() {
+  if (!sb) return;
+  try {
+    const { data, error } = await sb.from("geofences")
+      .select("*").eq("active", true).order("updated_at", { ascending: false }).limit(1);
+    if (error) throw error;
+    const row = (data || [])[0];
+    if (row && row.geojson) {
+      GEOFENCE_ID = row.id;
+      GEOFENCE_RING = ringFromGeoJSON(row.geojson);
+      if (fenceLayer && GEOFENCE_RING) {
+        fenceLayer.clearLayers();
+        L.polygon(GEOFENCE_RING.map(c => [c[1], c[0]]),
+          { color: "#2e5a34", weight: 2, fillOpacity: 0.06 }).addTo(fenceLayer);
+      }
+    }
+  } catch (e) { /* no fence yet — fine */ }
+}
+
+async function saveGeofence(feature) {
+  if (!sb) return;
+  const payload = { name: "Pasture perimeter", geojson: feature, active: true, updated_at: new Date().toISOString() };
+  try {
+    if (GEOFENCE_ID) {
+      await sb.from("geofences").update(payload).eq("id", GEOFENCE_ID);
+    } else {
+      const { data } = await sb.from("geofences").insert(payload).select("id").single();
+      if (data) GEOFENCE_ID = data.id;
+    }
+    GEOFENCE_RING = ringFromGeoJSON(feature);
+    loadMapPins();
+  } catch (e) { alert("Couldn't save the fence: " + (e.message || e)); }
+}
+
+async function clearGeofence() {
+  try { if (sb && GEOFENCE_ID) await sb.from("geofences").delete().eq("id", GEOFENCE_ID); } catch (e) {}
+  GEOFENCE_ID = null; GEOFENCE_RING = null;
+  if (fenceLayer) fenceLayer.clearLayers();
+  loadMapPins();
+}
 
 function ensureMapIcons() {
   if (window.L && L.Icon && L.Icon.Default) {
@@ -414,7 +482,7 @@ function renderMap() {
       <button class="btn btn-sm" id="map-refresh">Refresh</button>
     </div>
     <div id="map" style="height:68vh;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:var(--green-l)"></div>
-    <p class="fab-note" style="margin-top:8px">Latest known position per tracked animal. Tap a pin to open its record. Needs a connection.</p>`;
+    <p class="fab-note" style="margin-top:8px">Latest known position per tracked animal. Tap a pin to open its record. To set the pasture fence, use the polygon tool (top-right ▷) to trace the perimeter — click each corner, then click the first point to finish. Red pins are animals outside the fence.</p>`;
   $("#map-refresh").addEventListener("click", loadMapPins);
 
   if (!window.L) { $("#map-status").textContent = "Map library didn't load — check your connection and Refresh."; return; }
@@ -432,6 +500,27 @@ function renderMap() {
     const link = e.popup.getElement().querySelector(".map-open");
     if (link) link.addEventListener("click", (ev) => { ev.preventDefault(); openProfile(link.dataset.open); });
   });
+
+  // ---- Geofence: draw / edit the pasture perimeter ----
+  fenceLayer = new L.FeatureGroup();
+  herdMap.addLayer(fenceLayer);
+  if (window.L && L.Control && L.Control.Draw) {
+    const drawControl = new L.Control.Draw({
+      position: "topright",
+      draw: { polygon: { allowIntersection: false, showArea: false, shapeOptions: { color: "#2e5a34" } },
+              polyline: false, rectangle: false, circle: false, marker: false, circlemarker: false },
+      edit: { featureGroup: fenceLayer, remove: true },
+    });
+    herdMap.addControl(drawControl);
+    herdMap.on(L.Draw.Event.CREATED, (e) => {
+      fenceLayer.clearLayers(); fenceLayer.addLayer(e.layer);
+      e.layer.setStyle && e.layer.setStyle({ color: "#2e5a34", weight: 2, fillOpacity: 0.06 });
+      saveGeofence(e.layer.toGeoJSON());
+    });
+    herdMap.on(L.Draw.Event.EDITED, (e) => { e.layers.eachLayer((l) => saveGeofence(l.toGeoJSON())); });
+    herdMap.on(L.Draw.Event.DELETED, () => { clearGeofence(); });
+  }
+  loadGeofence();
 
   loadMapPins();
 }
@@ -464,13 +553,17 @@ async function loadMapPins() {
     }
 
     const bounds = [];
+    let outCount = 0;
     latest.forEach(row => {
       const a = row.animal_id ? ANIMALS.find(x => x.id === row.animal_id) : null;
       const label = a ? (a.tag_number || a.name || "Animal") : ("Device " + row.device_id);
       const when = row.recorded_at ? new Date(row.recorded_at).toLocaleString() : "";
       const batt = (row.battery != null && row.battery !== "") ? ` &middot; \u{1F50B} ${esc(String(row.battery))}` : "";
-      const m = L.marker([row.lat, row.lng]).addTo(herdMap);
+      const outside = isOutsideFence(row.lat, row.lng);
+      if (outside) outCount++;
+      const m = L.marker([row.lat, row.lng], outside ? { icon: redDotIcon() } : {}).addTo(herdMap);
       m.bindPopup(
+        (outside ? `<b style="color:#d9342b">⚠ Outside fence</b><br>` : "") +
         `<b>${esc(label)}</b><br><span style="font-size:12px;color:#555">${esc(when)}${batt}</span>` +
         (a ? `<br><a href="#" data-open="${a.id}" class="map-open">Open record &rsaquo;</a>` : "")
       );
@@ -481,7 +574,10 @@ async function loadMapPins() {
     if (bounds.length === 1) herdMap.setView(bounds[0], 15);
     else herdMap.fitBounds(bounds, { padding: [40, 40], maxZoom: 16 });
 
-    if (status) status.textContent = `${latest.length} tracked animal${latest.length > 1 ? "s" : ""} · updated ${new Date().toLocaleTimeString()}`;
+    if (status) status.textContent =
+      `${latest.length} tracked animal${latest.length > 1 ? "s" : ""}` +
+      (GEOFENCE_RING ? (outCount ? ` · ⚠ ${outCount} outside the fence` : " · all inside the fence") : "") +
+      ` · updated ${new Date().toLocaleTimeString()}`;
   } catch (e) {
     if (status) status.textContent = /respond|timed out|Failed to fetch|NetworkError/i.test(e.message || "")
       ? "Couldn't reach the server — tap Refresh to try again."
