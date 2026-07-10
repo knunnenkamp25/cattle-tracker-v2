@@ -1,0 +1,30 @@
+name: Down-cow alert check
+
+# Flags collared cows that haven't moved for longer than the configured
+# window (settings.down_cow_hours) and emails an alert. Reuses the same
+# secrets as the weekly reminder.
+on:
+  schedule:
+    - cron: "17 * * * *"     # hourly (GitHub may delay/skip on free tier)
+  workflow_dispatch:            # run on demand from the Actions tab
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install nodemailer
+      - name: Check for down cows
+        env:
+          SUPABASE_URL:         ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          REMINDER_TO:          ${{ secrets.REMINDER_TO }}
+          REMINDER_FROM:        ${{ secrets.REMINDER_FROM }}
+          SMTP_HOST:            ${{ secrets.SMTP_HOST }}
+          SMTP_PORT:            ${{ secrets.SMTP_PORT }}
+          SMTP_USER:            ${{ secrets.SMTP_USER }}
+          SMTP_PASS:            ${{ secrets.SMTP_PASS }}
+        run: node scripts/check-down-cows.js
