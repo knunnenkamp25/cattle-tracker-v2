@@ -551,6 +551,34 @@ async function loadDownAlerts() {
   } catch (e) { el.style.display = "none"; }
 }
 
+// ---- Remote collar config (Notehub env vars via the collar-config Edge Function) ----
+async function loadCollarConfig() {
+  const sel = $("#collar-report"), st = $("#collar-status");
+  if (!sel || !sb) return;
+  if (!OFF.isOnline()) { if (st) st.textContent = "offline — connect to change collar settings"; return; }
+  if (st) st.textContent = "checking…";
+  try {
+    const { data, error } = await sb.functions.invoke("collar-config", { body: { action: "get" } });
+    if (error) throw error;
+    if (data && data.error) throw new Error(data.error);
+    const ev = (data && data.environment_variables) || {};
+    if (ev.report_mins != null && ev.report_mins !== "") { sel.value = String(ev.report_mins); if (st) st.textContent = ""; }
+    else if (st) st.textContent = "not set yet — pick an interval";
+  } catch (e) { if (st) st.textContent = "couldn't reach collar settings"; }
+}
+async function saveCollarConfig(val) {
+  const st = $("#collar-status");
+  if (!sb || !val) return;
+  if (!OFF.isOnline()) { if (st) st.textContent = "offline — try again when connected"; return; }
+  if (st) st.textContent = "saving…";
+  try {
+    const { data, error } = await sb.functions.invoke("collar-config", { body: { action: "set", vars: { report_mins: String(val) } } });
+    if (error) throw error;
+    if (data && data.error) throw new Error(data.error);
+    if (st) st.textContent = "saved — takes effect on the collar's next check-in";
+  } catch (e) { if (st) st.textContent = "save failed: " + (e.message || e); }
+}
+
 function ensureMapIcons() {
   if (window.L && L.Icon && L.Icon.Default) {
     L.Icon.Default.mergeOptions({
@@ -589,6 +617,19 @@ function renderMap() {
         <option value="48">48 hours</option>
       </select>
     </div>
+    <div style="display:flex;gap:6px;margin-bottom:8px;flex-wrap:wrap;align-items:center">
+      <label style="font-size:13px;color:var(--muted,#666)">Collar reports its location every</label>
+      <select id="collar-report" style="padding:6px 8px;border:1px solid var(--line,#ccc);border-radius:8px">
+        <option value="">—</option>
+        <option value="15">15 minutes</option>
+        <option value="30">30 minutes</option>
+        <option value="60">1 hour</option>
+        <option value="120">2 hours</option>
+        <option value="360">6 hours</option>
+        <option value="720">12 hours</option>
+      </select>
+      <span id="collar-status" style="font-size:12px;color:var(--muted,#888)"></span>
+    </div>
     <div id="down-banner" style="display:none;background:#fdecea;border:1px solid #f5c2bd;color:#7a1c14;border-radius:8px;padding:8px 10px;margin-bottom:8px;font-size:13px"></div>
     <div id="map" style="height:60vh;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:var(--green-l)"></div>
     <p class="fab-note" style="margin-top:8px">Green pins = latest position; red pins = outside the fence. Pick a cow + a time window above to trace where it has been. Draw the pasture fence with the polygon tool (top-right ▷) — click each corner, then the first point to close it.</p>`;
@@ -604,6 +645,8 @@ function renderMap() {
   $("#down-hours").addEventListener("change", (e) => saveAlertSetting(e.target.value));
   loadAlertSetting();
   loadDownAlerts();
+  $("#collar-report").addEventListener("change", (e) => saveCollarConfig(e.target.value));
+  loadCollarConfig();
 
   if (!window.L) { $("#map-status").textContent = "Map library didn't load — check your connection and Refresh."; return; }
   ensureMapIcons();
