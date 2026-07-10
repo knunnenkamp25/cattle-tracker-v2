@@ -550,6 +550,24 @@ async function loadDownAlerts() {
     el.querySelectorAll(".alert-open").forEach(a => a.addEventListener("click", (ev) => { ev.preventDefault(); openProfile(a.dataset.open); }));
   } catch (e) { el.style.display = "none"; }
 }
+async function loadFenceAlerts() {
+  const el = $("#fence-banner");
+  if (!el || !sb) return;
+  try {
+    const { data } = await sb.from("alerts").select("*").eq("type", "geofence_escape").eq("status", "open").order("opened_at", { ascending: false });
+    const rows = data || [];
+    if (!rows.length) { el.style.display = "none"; el.innerHTML = ""; return; }
+    const item = (r) => {
+      const a = ANIMALS.find(x => x.id === r.animal_id);
+      const nm = a ? (a.tag_number ? ("Tag " + a.tag_number) : (a.name || "Animal")) : ("Device " + (r.device_id || ""));
+      const link = a ? ` <a href="#" data-open="${a.id}" class="fence-open" style="color:#7a1c14;text-decoration:underline">view</a>` : "";
+      return `<li>${esc(nm)} — ${esc(r.detail || "outside the fence")}${link}</li>`;
+    };
+    el.style.display = "block";
+    el.innerHTML = `<b>⚠ Outside the fence (${rows.length}):</b><ul style="margin:4px 0 0;padding-left:18px">${rows.map(item).join("")}</ul>`;
+    el.querySelectorAll(".fence-open").forEach(a => a.addEventListener("click", (ev) => { ev.preventDefault(); openProfile(a.dataset.open); }));
+  } catch (e) { el.style.display = "none"; }
+}
 
 // ---- Remote collar config (Notehub env vars via the collar-config Edge Function) ----
 async function loadCollarConfig() {
@@ -631,6 +649,7 @@ function renderMap() {
       <span id="collar-status" style="font-size:12px;color:var(--muted,#888)"></span>
     </div>
     <div id="down-banner" style="display:none;background:#fdecea;border:1px solid #f5c2bd;color:#7a1c14;border-radius:8px;padding:8px 10px;margin-bottom:8px;font-size:13px"></div>
+    <div id="fence-banner" style="display:none;background:#fdecea;border:1px solid #f5c2bd;color:#7a1c14;border-radius:8px;padding:8px 10px;margin-bottom:8px;font-size:13px"></div>
     <div id="map" style="height:60vh;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:var(--green-l)"></div>
     <p class="fab-note" style="margin-top:8px">Green pins = latest position; red pins = outside the fence. Pick a cow + a time window above to trace where it has been. Draw the pasture fence with the polygon tool (top-right ▷) — click each corner, then the first point to close it.</p>`;
   $("#map-refresh").addEventListener("click", refreshMap);
@@ -645,6 +664,7 @@ function renderMap() {
   $("#down-hours").addEventListener("change", (e) => saveAlertSetting(e.target.value));
   loadAlertSetting();
   loadDownAlerts();
+  loadFenceAlerts();
   $("#collar-report").addEventListener("change", (e) => saveCollarConfig(e.target.value));
   loadCollarConfig();
 
