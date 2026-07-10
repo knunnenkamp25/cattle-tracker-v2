@@ -465,6 +465,60 @@ async function clearGeofence() {
   loadMapPins();
 }
 
+function greenDotIcon() {
+  return L.divIcon({ className: "",
+    html: '<div style="width:14px;height:14px;border-radius:50%;background:#2e5a34;border:2px solid #fff;box-shadow:0 0 0 2px rgba(46,90,52,.45)"></div>',
+    iconSize: [14, 14], iconAnchor: [7, 7], popupAnchor: [0, -7] });
+}
+
+// ---- History / step tracker ----
+let histLayer = null;
+let HIST = { animalId: "", days: 1 };
+
+function clearMapLayers() {
+  herdMarkers.forEach(m => herdMap && herdMap.removeLayer(m)); herdMarkers = [];
+  if (histLayer && herdMap) { herdMap.removeLayer(histLayer); histLayer = null; }
+}
+
+function refreshMap() {
+  if (HIST.animalId) loadHistory(HIST.animalId, HIST.days);
+  else loadMapPins();
+}
+
+async function loadHistory(animalId, days) {
+  const status = $("#map-status");
+  if (!herdMap || !sb) return;
+  if (!OFF.isOnline()) { if (status) status.textContent = "Offline — the map needs a connection."; return; }
+  if (status) status.textContent = "Loading history…";
+  clearMapLayers();
+  const since = new Date(Date.now() - days * 86400000).toISOString();
+  try {
+    const q = sb.from("locations").select("*").eq("animal_id", animalId)
+      .gte("recorded_at", since).order("recorded_at", { ascending: true }).limit(5000);
+    const timeout = new Promise((_, rej) => setTimeout(() => rej(new Error("Server didn't respond")), 12000));
+    const { data, error } = await Promise.race([q, timeout]);
+    if (error) throw error;
+    const pts = (data || []).filter(r => r.lat != null && r.lng != null);
+    const a = ANIMALS.find(x => x.id === animalId);
+    const name = a ? (a.tag_number || a.name || "Animal") : "Animal";
+    if (!pts.length) { if (status) status.textContent = `No fixes for ${name} in this window.`; return; }
+    histLayer = L.featureGroup().addTo(herdMap);
+    L.polyline(pts.map(r => [r.lat, r.lng]), { color: "#2e5a34", weight: 3, opacity: 0.7 }).addTo(histLayer);
+    pts.forEach((r, i) => {
+      const last = i === pts.length - 1, first = i === 0;
+      L.circleMarker([r.lat, r.lng], {
+        radius: last ? 7 : 4, weight: 1, color: "#fff",
+        fillColor: last ? "#d9342b" : (first ? "#8a968c" : "#2e5a34"), fillOpacity: 1,
+      }).bindPopup(`<b>${esc(name)}</b><br><span style="font-size:12px;color:#555">${esc(new Date(r.recorded_at).toLocaleString())}${last ? " · latest" : first ? " · start" : ""}</span>`).addTo(histLayer);
+    });
+    herdMap.fitBounds(histLayer.getBounds(), { padding: [40, 40], maxZoom: 16 });
+    const label = days === 1 ? "past day" : days === 7 ? "past week" : days === 30 ? "past month" : `past ${days} days`;
+    if (status) status.textContent = `${name} · ${pts.length} fix${pts.length > 1 ? "es" : ""} · ${label}`;
+  } catch (e) {
+    if (status) status.textContent = "Couldn't load history: " + (e.message || e);
+  }
+}
+
 function ensureMapIcons() {
   if (window.L && L.Icon && L.Icon.Default) {
     L.Icon.Default.mergeOptions({
@@ -476,14 +530,34 @@ function ensureMapIcons() {
 }
 
 function renderMap() {
+  const tracked = ANIMALS.filter(a => a.device_id);
+  const opts = ['<option value="">All cows (live)</option>']
+    .concat(tracked.map(a => `<option value="${a.id}">${esc(a.tag_number || a.name || "Animal")}</option>`)).join("");
   view().innerHTML = `
     <div class="row-between" style="margin-bottom:8px">
       <div class="muted" id="map-status">Loading…</div>
       <button class="btn btn-sm" id="map-refresh">Refresh</button>
     </div>
-    <div id="map" style="height:68vh;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:var(--green-l)"></div>
-    <p class="fab-note" style="margin-top:8px">Latest known position per tracked animal. Tap a pin to open its record. To set the pasture fence, use the polygon tool (top-right ▷) to trace the perimeter — click each corner, then click the first point to finish. Red pins are animals outside the fence.</p>`;
-  $("#map-refresh").addEventListener("click", loadMapPins);
+    <div style="display:flex;gap:6px;margin-bottom:8px;flex-wrap:wrap;align-items:center">
+      <select id="hist-animal" style="padding:6px 8px;border:1px solid var(--line,#ccc);border-radius:8px;max-width:170px">${opts}</select>
+      <span id="hist-ranges" style="display:inline-flex;gap:4px">
+        <button class="btn btn-sm" data-range="1">Day</button>
+        <button class="btn btn-sm" data-range="3">3 Days</button>
+        <button class="btn btn-sm" data-range="7">Week</button>
+        <button class="btn btn-sm" data-range="30">Month</button>
+      </span>
+    </div>
+    <div id="map" style="height:62vh;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:var(--green-l)"></div>
+    <p class="fab-note" style="margin-top:8px">Green pins = latest position; red pins = outside the fence. Pick a cow + a time window above to trace where it has been. Draw the pasture fence with the polygon tool (top-right ▷) — click each corner, then the first point to close it.</p>`;
+  $("#map-refresh").addEventListener("click", refreshMap);
+  $("#hist-animal").addEventListener("change", (e) => { HIST.animalId = e.target.value; refreshMap(); });
+  $$("#hist-ranges button").forEach(b => b.addEventListener("click", () => {
+    HIST.days = Number(b.dataset.range);
+    $$("#hist-ranges button").forEach(x => x.classList.remove("btn-primary"));
+    b.classList.add("btn-primary");
+    if (!HIST.animalId) { $("#map-status").textContent = "Pick a cow above to trace its path for this window."; return; }
+    refreshMap();
+  }));
 
   if (!window.L) { $("#map-status").textContent = "Map library didn't load — check your connection and Refresh."; return; }
   ensureMapIcons();
@@ -522,7 +596,7 @@ function renderMap() {
   }
   loadGeofence();
 
-  loadMapPins();
+  refreshMap();
 }
 
 async function loadMapPins() {
@@ -544,8 +618,7 @@ async function loadMapPins() {
       if (!seen.has(key)) { seen.add(key); latest.push(row); }
     });
 
-    herdMarkers.forEach(m => herdMap.removeLayer(m));
-    herdMarkers = [];
+    clearMapLayers();
 
     if (!latest.length) {
       if (status) status.textContent = "No location fixes yet — pins appear once a tracker reports in.";
@@ -561,7 +634,7 @@ async function loadMapPins() {
       const batt = (row.battery != null && row.battery !== "") ? ` &middot; \u{1F50B} ${esc(String(row.battery))}` : "";
       const outside = isOutsideFence(row.lat, row.lng);
       if (outside) outCount++;
-      const m = L.marker([row.lat, row.lng], outside ? { icon: redDotIcon() } : {}).addTo(herdMap);
+      const m = L.marker([row.lat, row.lng], { icon: outside ? redDotIcon() : greenDotIcon() }).addTo(herdMap);
       m.bindPopup(
         (outside ? `<b style="color:#d9342b">⚠ Outside fence</b><br>` : "") +
         `<b>${esc(label)}</b><br><span style="font-size:12px;color:#555">${esc(when)}${batt}</span>` +
