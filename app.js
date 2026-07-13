@@ -163,7 +163,7 @@ async function init() {
   sb.auth.onAuthStateChange((_e, session) => renderAuth(session));
 
   // sync when the connection returns; tap the pill to force a sync
-  window.addEventListener("online", async () => { updateSyncUI(); await loadAnimals(); refreshAfterSync(); toast("Back online — syncing"); });
+  window.addEventListener("online", async () => { updateSyncUI(); await autoFlush(); await loadAnimals(); refreshAfterSync(); toast("Back online — syncing"); });
   window.addEventListener("offline", () => { updateSyncUI(); toast("Offline — changes will be saved on this device"); });
   document.addEventListener("click", (e) => {
     if (e.target && e.target.id === "sync-pill") syncPillClicked();
@@ -171,6 +171,11 @@ async function init() {
 
   const { data } = await sb.auth.getSession();
   await renderAuth(data.session);
+
+  // safety net: keep retrying any stuck writes so a backlog can't accumulate
+  setInterval(() => { if (APP_READY) autoFlush(); }, 120000);
+  if (data.session) autoFlush();
+  document.addEventListener("visibilitychange", () => { if (!document.hidden && APP_READY) autoFlush(); });
 }
 
 async function renderAuth(session) {
@@ -285,6 +290,30 @@ async function uploadPhoto(file, unique_id) {
   return path;
 }
 
+/* Classify a sync error: transient (retry forever) vs a real data problem. */
+function isTransient(e) {
+  const msg = ((e && (e.message || e.error_description || e.msg)) || "") + "";
+  const code = ((e && (e.code || e.status)) ?? "") + "";
+  return /failed to fetch|networkerror|timeout|network|fetch|jwt|token|expired|unauthorized|not authenticated|refresh|50\d|429/i.test(msg)
+      || /^(401|403|408|409|425|429|500|502|503|504)$/.test(code);
+}
+
+/* Auto-recovery: fold any dead-lettered writes back into the queue, refresh the
+   login token, and flush. Safe to call anytime (all writes are idempotent
+   upserts). Runs on launch, when the connection returns, and on a timer — so a
+   backlog can never silently accumulate again. */
+async function autoFlush() {
+  if (!sb || !OFF.isOnline() || SYNCING) return;
+  try { await sb.auth.getSession(); } catch (_) {}   // refreshes an expired shared-login token
+  const failed = loadFailed();
+  if (failed.length) {
+    OUTBOX = [...OFF.loadOutbox(), ...failed.map(f => ({ ...f, tries: 0 }))];
+    OFF.saveOutbox(OUTBOX); saveFailed([]);
+  }
+  await syncOutbox();
+  updateSyncUI();
+}
+
 /* --- sync the outbox to Supabase --- */
 async function syncOutbox() {
   if (SYNCING || !OFF.isOnline() || !sb) return;
@@ -335,8 +364,13 @@ async function syncOutbox() {
             continue;                                        // success — don't re-queue or dead-letter
           } catch (_) { /* fall through to normal retry/dead-letter */ }
         }
-        item.tries = (item.tries || 0) + 1;                 // retry a few times, then dead-letter so it can't block forever
-        (item.tries >= 5 ? newFailed : remaining).push(item);
+        item.tries = (item.tries || 0) + 1;
+        // Transient problems (offline, expired login, server blip) must NEVER be
+        // given up on — keep them in the queue and retry forever. Only a genuine
+        // data/constraint error dead-letters, and even those are auto-retried by
+        // autoFlush() so a backlog can't silently pile up.
+        if (isTransient(e) || item.tries < 5) remaining.push(item);
+        else newFailed.push(item);
       }
     }
     OUTBOX = remaining; OFF.saveOutbox(OUTBOX);
