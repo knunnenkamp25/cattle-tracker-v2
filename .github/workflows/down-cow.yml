@@ -4,7 +4,9 @@ name: Herd alert checks
 #   1. Down-cow  — cows that haven't moved for longer than the configured
 #                  window (settings.down_cow_hours).
 #   2. Geofence  — cows whose latest fix is outside the drawn fence.
-# Both email an alert and reuse the same secrets as the weekly reminder.
+#   3. Battery   — collar voltage below the critical threshold
+#                  (settings.low_batt_volts, default 2.9 V).
+# All email an alert and reuse the same secrets as the weekly reminder.
 on:
   schedule:
     - cron: "17 * * * *"     # hourly (GitHub may delay/skip on free tier)
@@ -33,3 +35,6 @@ jobs:
       - name: Check the geofence
         if: always()          # run even if the down-cow step reported an issue
         run: node scripts/check-geofence.js
+      - name: Check collar batteries
+        if: always()
+        run: node scripts/check-battery.js
