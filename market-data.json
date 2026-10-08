@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-07T17:52:06.779Z",
+  "updated": "2026-10-08T17:55:20.270Z",
   "series": [
     {
       "date": "2026-10-05",
@@ -8,9 +8,67 @@
     {
       "date": "2026-10-06",
       "price": 398.83
+    },
+    {
+      "date": "2026-10-08",
+      "price": 398.83
     }
   ],
   "auctions": [
+    {
+      "code": "RH_LS151",
+      "name": "Staunton VA Livestock Auction",
+      "location": "Richmond, VA",
+      "report_date": "2026-10-08",
+      "head": 1472,
+      "categories": [
+        {
+          "label": "Steers 400-500 lb",
+          "low": "431",
+          "high": "483"
+        },
+        {
+          "label": "Steers 500-600 lb",
+          "low": "382",
+          "high": "424"
+        },
+        {
+          "label": "Steers 600-700 lb",
+          "low": "358",
+          "high": "366"
+        },
+        {
+          "label": "Heifers 400-500 lb",
+          "low": "360",
+          "high": "360"
+        },
+        {
+          "label": "Heifers 500-600 lb",
+          "low": "350",
+          "high": "350"
+        },
+        {
+          "label": "Heifers 600-700 lb",
+          "low": "325",
+          "high": "329"
+        },
+        {
+          "label": "Bulls 400-500 lb",
+          "low": "390",
+          "high": "418"
+        },
+        {
+          "label": "Bulls 500-600 lb",
+          "low": "365",
+          "high": "380"
+        },
+        {
+          "label": "Bulls 600-700 lb",
+          "low": "285",
+          "high": "328"
+        }
+      ]
+    },
     {
       "code": "RH_LS149",
       "name": "Wytheville VA Livestock Auction",
@@ -62,60 +120,6 @@
           "label": "Bulls 600-700 lb",
           "low": "330",
           "high": "358"
-        }
-      ]
-    },
-    {
-      "code": "RH_LS151",
-      "name": "Staunton VA Livestock Auction",
-      "location": "Richmond, VA",
-      "report_date": "2026-10-05",
-      "head": 1472,
-      "categories": [
-        {
-          "label": "Steers 400-500 lb",
-          "low": "431",
-          "high": "483"
-        },
-        {
-          "label": "Steers 500-600 lb",
-          "low": "382",
-          "high": "424"
-        },
-        {
-          "label": "Steers 600-700 lb",
-          "low": "358",
-          "high": "366"
-        },
-        {
-          "label": "Heifers 400-500 lb",
-          "low": "360",
-          "high": "360"
-        },
-        {
-          "label": "Heifers 500-600 lb",
-          "low": "350",
-          "high": "350"
-        },
-        {
-          "label": "Heifers 600-700 lb",
-          "low": "325",
-          "high": "329"
-        },
-        {
-          "label": "Bulls 400-500 lb",
-          "low": "390",
-          "high": "418"
-        },
-        {
-          "label": "Bulls 500-600 lb",
-          "low": "365",
-          "high": "380"
-        },
-        {
-          "label": "Bulls 600-700 lb",
-          "low": "285",
-          "high": "328"
         }
       ]
     },
@@ -176,6 +180,12 @@
   ],
   "news": [
     {
+      "title": "Cattle Report - High Plains Journal",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFA4WDNBUXYwZElUdDJORzdLeU9ERUZpaG14blJrUy1wOVl1WGpncXU0UXAyNlJSWGJMc3FpVnVQUE4zSExsbGNfRjZZOVEzdi1DWm5aUVkydHFuRnpqYjhqWEN0VjY4Nmxj?oc=5",
+      "source": "High Plains Journal",
+      "date": "2026-10-08"
+    },
+    {
       "title": "USDA Feeder Cattle Prices &amp; CME Futures - October 7, 2026 - News and Statistics - IndexBox",
       "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPYkpqQ1IzUTU3ZGNuSXJzLWNaRUFLTU9aU3hRTkFSU2o2TzZrVzFxdmJobl9qdG1FVEQyd1h4X2t2WFdCbWo5QVNMUXlmbVZwemdxa1pJelExV0hfUWZnNUs0Y29fYnloOGwzQnhHODBfeDdpZmp6b3liaV9hd1ptM0hMb3A2dw?oc=5",
       "source": "IndexBox",
@@ -188,8 +198,26 @@
       "date": "2026-10-07"
     },
     {
-      "title": "USDA Beef Trimmings Report October 7, 2026: National FOB Plant Trades - News and Statistics - IndexBox",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQS24yajhsSUhvakJMQzd5UUtyODBZU0hQZFNBZ2RNc29lejl5VFZRT1lrMFVVdWZVZjZvT2NwZ1FIV2pVODlhcHdJNTdyRkZYejVILTM3dXhNVmRoNGVUVE9GenVLcTNVTHh1THhFTER0d3FISDQ3ZUt0a0ZnOXdMRzJLLThFRjVuemtVV3lBS2J1ZlBmTzlqUWVpUjByWko3TnZ6b2xlZUtUSk9CaC12bU5rVTBEa2V5UzBBaURMazJ3SVFoWUE?oc=5",
+      "title": "Brashears: USDA Wants to Open More Doors for Small Meat Processors and Cattle Producers - RFD-TV",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNalhxT3A5Z3JGWUdFTXhSVW5FWmRVR0VXb0hmQlJYZ01JUzVOOF9Ha0lNaE9nbGJ6eEs0cXlkSFM3QjAtbXU3cF81cWREMzFCUUhiY1hndWpGaDg4Mm9Jb1k1LTlVOEN0ZUhGWUdsaWl5Qmh5YVE0UUtBQzM1WGJVT2lWeHdCRUN0bHpXRTdTeWU5T0RCY0NNVWVEcFBJQ0IxeFBPZ2NIM2NqMm1N?oc=5",
+      "source": "RFD-TV",
+      "date": "2026-10-07"
+    },
+    {
+      "title": "USDA Boxed Beef Cutout Report October 7, 2026: Choice/Select Values, Load Counts - News and Statistics - IndexBox",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNUjUyVTVwNk9KRjdtdHJCOFlaYUJONXgtWmpOckR6VmYteHJDRkd5TWVtNkVNekw2WWJRU1hRN0gwMDVnYWp2RWFtSDY1ZUNKd3hBNlE3SndKdFMwaV91RTVUdVlMcVpWemtGanpsWVZzazh4Zmd2OUxMbDQzUWFTZWRWQXFLTXR1YUhYcEJodVpmZmt4VEhxd1Z5NldOMnp0Q1MyQm1lTHZmWHdpVVh3eHU4R2VBR1RQRGNUVlR3Wkh5eEhFdWo1U1Z3?oc=5",
+      "source": "IndexBox",
+      "date": "2026-10-07"
+    },
+    {
+      "title": "USDA Cattle Report: Formula Base Purchases Hit 11,325 Head - News and Statistics - IndexBox",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNWkJGR05JNEppSk5fZ01vaThydXpqN0dJY1FyX0xGZUNJSTdhRVFoSGV4bV9wVmM0SHlPM3dDQWxpcTZPc1ZyZDVFOVVUcFdsVkg5WmNFUk1tLU9DQjN3RkJYWjhJX3BtQkIxYnFUR2Jha28ydGNSbDRDZUdDT3A1MFgtdl8yQk1hVzhyQTU5YkFZWmY3?oc=5",
+      "source": "IndexBox",
+      "date": "2026-10-07"
+    },
+    {
+      "title": "USDA Kansas Daily Direct Slaughter Cattle Report LM_CT121 - October 7, 2026 - News and Statistics - IndexBox",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOY0VqN2tudmhwLWdPNTZ6dXhqZ3pVdjlrTHZ0bGQzNDMtQTlYSnZtR3JSYU9Edm10czFMWl9uZE44VlhZTEtvUlkyQnljUmRNMmRFaDV2dzZJRGxkaU9EaHByMW8wNHJ3em1lTlYya0VlaVF5TnBqMW5RQUs3QXJsR3pSeXJYVnpPSWZiNUx0TkNTOGdVMEU0eHJKTm9YYkR3VXc?oc=5",
       "source": "IndexBox",
       "date": "2026-10-07"
     },
@@ -206,46 +234,22 @@
       "date": "2026-10-05"
     },
     {
-      "title": "Weekly protein report: Global beef trade shifts as Brazil faces new market barriers - The Cattle Site",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNOWZ2Rmx1eC1zLWM1TWVnbjA2NVJQcldZN2xxa0RaM3BFQVdhYnpwNnpBeTRtU0hldHNKbU1hcnVCRC0xdERaZ09nMmNyNWxRNE5GMjlmVEk4V0pWcVhtZXNTb0hsNndMQk5ZVzh3MFp5UncxNHYyX2R3Y3RXa1RGcVJZUDVWMERTWXhSbWwtQ25PdERuOTlqVGlFdEZnQUhhTEF3UEJMa0paUGJadlFNZkFpU0ZjbEdGa3BCUm9mbVl2aklVc0dV?oc=5",
-      "source": "The Cattle Site",
-      "date": "2026-10-03"
-    },
-    {
-      "title": "Beef Prices Lead USDA Food Inflation Outlook Higher - RFD-TV",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE92bUZhVm9fNWRLdTcwMk5JdHgwUXFuX0Q2OUtnZ2FoZWtjaWxlR3ZJMjBFbWExeTJhT1Z1UlZNdDV6MUdMTkxfM2ZiQkwzRmE5c1k2Z3pGY1k1RlhYbVV3SlFOTmhraHRnbmFYcklHMkVUQVgxa29jS3E1X29Kdw?oc=5",
-      "source": "RFD-TV",
-      "date": "2026-10-01"
-    },
-    {
-      "title": "Beef Imports: Former USDA Chief Warns of Impact on U.S. Ranchers - AgroLatam",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNWS13N1B3QlBFaWVVOVc5Nm9NQ2F0ZmVOR1lRY1RhT0QxbS1Hd2kwNW9kME12S2F2cjRfa2ctVDV6RnZlRGFzN2NSdzl4Mjl5YUc3VkxuZXZTbjVtNXRMa004S0lVaGc3YTNPWmhMaEp5M0RiWVFPSjRzOEFsTjBLZEpNQ1FZNTJlTmM4N1hMY1RQYjJpWGN0VGN3ZmVURHpCX0hDOXVn?oc=5",
-      "source": "AgroLatam",
-      "date": "2026-09-22"
-    },
-    {
-      "title": "Virginia cattle farmers react to new beef import policy - WDBJ7",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPeVlGVC1ndmVucmlORWJFd3NUU1NaNjE5bE1YbUgzbS1QS0RKZEY4OE9xNUt4eFp1Zm83RWhEMXJ3RjNqNVZ1eWNuNlNuNkNxRExpTzRwaV9NRmFBcWxDUzhhVm54c1ZXTUQ2QXJVZVdiUHVVZ1U2dTYyZExpYUdPa3Q4X3BaUzBUckRfUTFfONIBowFBVV95cUxQMlU4SEFhTW9nVGZKTXUyVHptcGJpajVwWTI0QlFWZHhXZktmVmFQeUFoMmdVVktPV1RxeTVLbXhIc2R2Tzg2NW5ySXgxQkJYMlN4VTVTNENyeU03d2h3c2N0cktqQ19lc2xORExvRThpazJFT21FMjhzYVIxUnRRNzZqRXB3Z0FZeDlZWTVoSlkzTnNtV3Z5bkNzQ1B0ZmViS25B?oc=5",
-      "source": "WDBJ7",
+      "title": "Virginia cattle farmers react to new beef import policy - WWBT",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPeDR1a25GZ0lQUU5QODdYckI5RUcxOVpzc3VpVDdiRllfMkZ4cjA1eWZ3anFXYTMyNm5DY09mYUtmdl9MMTNyWEVwVUk5TjlSazJHTEFwSTVNaTcwanNDSU9qLVhmQWZRc3pFQ2VnZHhoeHlPNHRvQmFYeXJfLXZzYU1kSmRkWWN6MUU2eHRwZHh2eVk3eGNBb9IBrAFBVV95cUxNb1BEbGlhUkZuYVhXdUhOdUVURXBUak9YVG0zN2dsOHY0ZHVJajhIUUtia3BSZ2lpUDBEdEpVektEbFBSakZWTWRZeXFnY0Q1Q1REVERXbVRmWnpLUDJtRTR1X2l1N3hHdFItWVFtVGZVVnhfZGUtS3hQc1MxSndKbEhoenVWNERKUzI1VWR2R1Yxb21HY19rcWNwUERqYnVodVBUNUt3amlIbXd2?oc=5",
+      "source": "WWBT",
       "date": "2026-09-01"
     },
     {
-      "title": "Spanberger meets with Virginia cattle ranchers in Botetourt County - WHRO",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQaHc5TERoeEgwOGpmeGtXbV9qT1ZkUTdVYWRNNXN5ZTlSNzdlQzBEXzkzZ2FIcW5DOV9CbFhPZzkwSFFmWGFoME9HSHF5VzVvcXN4aTgyckVTa2Z5NjUwVTRQTzhFNF95VjdJT3M3V2pHSi11T25icHNTanpQVHBqT25xUjE2Zm10WlpSQWRUOUNnTGJmdDVBMVZ5UDVKRVE?oc=5",
-      "source": "WHRO",
+      "title": "Spanberger meets with Virginia cattle ranchers in Botetourt County - WVTF",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQekxPdWZjSGdIQUxQYlVmeGlqSWE3THlEM0U0eTRXalkyYjl4NFZ2ZDlsdFIwZklpTC1yVFhUcHZRXzhSN1BLUUNGSXJacGFWVGRHcmxrcFRCUmZYb29HX1ROZTA2bTE2NmthQmdHclYxY1VXZi1ReGYwX3QxckR0TGFxQ1V4U1V1aXNvOG9mSk5laGw1a09VZGRuVGtCSlczYTRmRTB3?oc=5",
+      "source": "WVTF",
       "date": "2026-09-01"
     },
     {
-      "title": "Virginia farmers brace for beef import surge under Trump’s 90-day tariff suspension - WVIR",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOUVR2WDFFVXdUMXF0bG03LU1FMUQzeWZKZVBQV1l0Q0lvbDd6VXU4YV9uQXd5c051YkhzdC1Sb3FaQVoyb29pdXZLdTRTeThMc1ByeEVQNjZvNGtSQXkyLXE2VG0ta3VTRWQ2azVGZHM2T2Zvdm1ua3M5S1dtSHZHTDZsMV9YRW9ieWJ0QmZqdkVHWkZSTXRPdko0V1hyazU1SmlMdkZyRFFyaVJxQkk4N1Bka9IBxwFBVV95cUxPLWhoalZtRERaVGhucjNvRE50ZTlpNFlZWWNOSGRrTHlwdHhJMzBRMVNHNXBIV0dyMk5CTVFNcVFnUm5SMksxeWwzS1RvQnVFNUhuWUZQWnVuZWNxdjVfUEJsWmROX29XSEp5QTZ3dGJOSXhPVlgteWN2LVFVclRfN3VIWE40N1ZNTVg2V2V1OENEYTFtUHpTeW9nRHNaQ2h4OU9BLTdHd01wVjlrTzJhck9ESWVtOV9FMzlGa0dhd0EwU1MtdkRR?oc=5",
-      "source": "WVIR",
-      "date": "2026-08-28"
-    },
-    {
-      "title": "Farm Bureau warns increased beef imports could harm Virginia cattle herd recovery - Page Valley News",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNUVVKNURWTFZTSTVtaWM4aHNhejJVMmo3a0N2dnp3dUZIQlZJYWJSNG5oSmh5bXRGb1RFRm5iUG5DazNIN2lnbWtOSXQyeHNkSVlYWXEzZ1k3RzE5T3pOekhSSDYwX0hnRTVlV2VISVNXWlduZmZSbjZEV3pieThocmRjblFDdU80ejFva2hhWWhoTnNGdlRyNF9tN2h6ZzJaRjYtdTNKcDVQY2VFaGc?oc=5",
-      "source": "Page Valley News",
-      "date": "2026-08-27"
+      "title": "Trump’s lower beef tariffs take effect Sept. 1, raising concerns for Virginia producers - WSET",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOVmlqX0xGSWt3YUlrSm4wVnlKZGJ5R25kbW9EWGlYeTB0dXRxaUdDSjNxNkRPeHFEQkI2ek1OcjdJRkF3cExwQnU4NUcwUmJqRzdtQkN1bkprYnpfTEVTdy0xTVNWNExhY0pzcEpodTZCRXZYT2J2Zk5qa0R0UEhTbUxRbzBxTDJfX1ZuYXE0cE1HTktVa3JWWTBNdXN0VGIyc1djY3ZSbS1wbUNwTkp6cS12QV9RWDQxc1d2eG43MnFxMXo1ZmFMOVlnWnRCN2d1dFVVT09iWDRUYURhVlBRTkNLckw?oc=5",
+      "source": "WSET",
+      "date": "2026-09-01"
     }
   ]
 }
