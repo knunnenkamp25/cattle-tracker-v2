@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-13T18:23:35.192Z",
+  "updated": "2026-10-14T15:52:32.580Z",
   "series": [
     {
       "date": "2026-10-05",
@@ -16,9 +16,67 @@
     {
       "date": "2026-10-13",
       "price": 405.5
+    },
+    {
+      "date": "2026-10-14",
+      "price": 405.5
     }
   ],
   "auctions": [
+    {
+      "code": "RH_LS151",
+      "name": "Staunton VA Livestock Auction",
+      "location": "Richmond, VA",
+      "report_date": "2026-10-14",
+      "head": 776,
+      "categories": [
+        {
+          "label": "Steers 400-500 lb",
+          "low": "430",
+          "high": "517"
+        },
+        {
+          "label": "Steers 500-600 lb",
+          "low": "375",
+          "high": "430"
+        },
+        {
+          "label": "Steers 600-700 lb",
+          "low": "340",
+          "high": "378"
+        },
+        {
+          "label": "Heifers 400-500 lb",
+          "low": "360",
+          "high": "370"
+        },
+        {
+          "label": "Heifers 500-600 lb",
+          "low": "357",
+          "high": "357"
+        },
+        {
+          "label": "Heifers 600-700 lb",
+          "low": "319",
+          "high": "319"
+        },
+        {
+          "label": "Bulls 400-500 lb",
+          "low": "404",
+          "high": "404"
+        },
+        {
+          "label": "Bulls 500-600 lb",
+          "low": "367",
+          "high": "367"
+        },
+        {
+          "label": "Bulls 600-700 lb",
+          "low": "330",
+          "high": "330"
+        }
+      ]
+    },
     {
       "code": "RH_LS149",
       "name": "Wytheville VA Livestock Auction",
@@ -70,60 +128,6 @@
           "label": "Bulls 600-700 lb",
           "low": "295",
           "high": "340"
-        }
-      ]
-    },
-    {
-      "code": "RH_LS151",
-      "name": "Staunton VA Livestock Auction",
-      "location": "Richmond, VA",
-      "report_date": "2026-10-13",
-      "head": 776,
-      "categories": [
-        {
-          "label": "Steers 400-500 lb",
-          "low": "430",
-          "high": "517"
-        },
-        {
-          "label": "Steers 500-600 lb",
-          "low": "375",
-          "high": "430"
-        },
-        {
-          "label": "Steers 600-700 lb",
-          "low": "340",
-          "high": "378"
-        },
-        {
-          "label": "Heifers 400-500 lb",
-          "low": "360",
-          "high": "370"
-        },
-        {
-          "label": "Heifers 500-600 lb",
-          "low": "357",
-          "high": "357"
-        },
-        {
-          "label": "Heifers 600-700 lb",
-          "low": "319",
-          "high": "319"
-        },
-        {
-          "label": "Bulls 400-500 lb",
-          "low": "404",
-          "high": "404"
-        },
-        {
-          "label": "Bulls 500-600 lb",
-          "low": "367",
-          "high": "367"
-        },
-        {
-          "label": "Bulls 600-700 lb",
-          "low": "330",
-          "high": "330"
         }
       ]
     },
@@ -196,12 +200,6 @@
       "date": "2026-10-13"
     },
     {
-      "title": "USDA Morning Report: Formulated Base Cattle Purchases Total 78,056 Head - IndexBox",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOTFNHNHNwT090QWd5bTNtcXViYTdGYkdwd3VrNklVaDgydFFYNVhsRXB2M0NIY2c1MkFaV3A0OUF1THN4b2QtejBqWktGOGc1M2VIYkNSM05IOF9OY2FIN3Jyd2xMZ1BvWUxIZVkyVllOdUItOUNnODhJbTAyYUxkX0dXRXZSRHJRRGN6SmViSk9TMHFxbldnRmYwUjRTVGlU?oc=5",
-      "source": "IndexBox",
-      "date": "2026-10-13"
-    },
-    {
       "title": "USDA Cattle Report: Formulated Base Purchases Drop to 103,584 Head - News and Statistics - IndexBox",
       "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQUnI0RVNBNVIyTF9OWDhhczVYZGJ6VzlRZlRkZjJES2hWV1lxUEZ4NGV1UFRVdTRzVmNpMy1YR2pQaWF5RmprdTg2YlBsbGJSNHEtYnVkZjdhOEFYRTVSRjVZRW1aV2RPS1JaMFhTaUNnbjlrYVRqWm5BaHduUG03R19rRk1LTkhpZ3FCR2xfOGJTOVRNdGJYUU1R?oc=5",
       "source": "IndexBox",
@@ -212,6 +210,12 @@
       "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNSWJkOTJZS0UtNDBFYWZUZUNVX1VROHp0cmViU1lyMmp0U1dOMXJnX3dOMmtmcmRWVW8zVzF5T00yTHlLcHh1YXJVT19TRGhQWENvdWhmSGdrQXZyazE0VDVvQm9HTmVDUkwxN2NyVmhQd1FuQTBxZHc4TTRCdWFpbzFVOFFpRVdBUlgyQ09NWHB5empHc3c?oc=5",
       "source": "IndexBox",
       "date": "2026-10-11"
+    },
+    {
+      "title": "USDA Feeder &amp; Stocker Cattle Auction Prices - October 10, 2026 - News and Statistics - IndexBox",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPTkE4ZVVZUlVEYzFpN1VRdnhvLUxDbm5sVHNmWDZjMkZZT1NFWmFlaWdLZ3EyMDFOaXAxTGFZa010MDJ1bFdUWEw1WS1YLS01Zmc4NjRaa0dfQUtYRHRPWlFqbW56Tkh2YTNzQ3R3ZC1UZG9EUjJabmpVVXdIY3ZDb2xOdnBoblhJcG1IOEV2UkRkakI0Rnc?oc=5",
+      "source": "IndexBox",
+      "date": "2026-10-10"
     },
     {
       "title": "Feeder Cattle Futures Hit Three-Month High as Corn Prices Plunge After USDA Report - AgroLatam",
@@ -232,12 +236,6 @@
       "date": "2026-10-09"
     },
     {
-      "title": "Cattle Report - High Plains Journal",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFA4WDNBUXYwZElUdDJORzdLeU9ERUZpaG14blJrUy1wOVl1WGpncXU0UXAyNlJSWGJMc3FpVnVQUE4zSExsbGNfRjZZOVEzdi1DWm5aUVkydHFuRnpqYjhqWEN0VjY4Nmxj?oc=5",
-      "source": "High Plains Journal",
-      "date": "2026-10-08"
-    },
-    {
       "title": "USDA National Dairy Comprehensive Report: September 2026 Milk, Feed, and Cattle Prices - News and Statistics - IndexBox",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQQUtZcGU0aFBHOEc1XzdCWFlRbEgyYjhEN1BxMzhQMldZbkppcHZqVXJBWXNVVkR1bkhzX3RfaFE0bU1XVUpyWWRvNUlrY0xLSk5iWGExNWdsNDlYTlo0cU5mR0dDRnZSVnB5RzNRNHVtNThaM2NHY2xkUnBPa1JqdktNUkE?oc=5",
       "source": "IndexBox",
@@ -253,6 +251,12 @@
       "title": "Virginia cattle farmers react to new beef import policy - WDBJ7",
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPeVlGVC1ndmVucmlORWJFd3NUU1NaNjE5bE1YbUgzbS1QS0RKZEY4OE9xNUt4eFp1Zm83RWhEMXJ3RjNqNVZ1eWNuNlNuNkNxRExpTzRwaV9NRmFBcWxDUzhhVm54c1ZXTUQ2QXJVZVdiUHVVZ1U2dTYyZExpYUdPa3Q4X3BaUzBUckRfUTFfONIBowFBVV95cUxQMlU4SEFhTW9nVGZKTXUyVHptcGJpajVwWTI0QlFWZHhXZktmVmFQeUFoMmdVVktPV1RxeTVLbXhIc2R2Tzg2NW5ySXgxQkJYMlN4VTVTNENyeU03d2h3c2N0cktqQ19lc2xORExvRThpazJFT21FMjhzYVIxUnRRNzZqRXB3Z0FZeDlZWTVoSlkzTnNtV3Z5bkNzQ1B0ZmViS25B?oc=5",
       "source": "WDBJ7",
+      "date": "2026-09-01"
+    },
+    {
+      "title": "Spanberger meets with Virginia cattle ranchers in Botetourt County - WVTF",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQekxPdWZjSGdIQUxQYlVmeGlqSWE3THlEM0U0eTRXalkyYjl4NFZ2ZDlsdFIwZklpTC1yVFhUcHZRXzhSN1BLUUNGSXJacGFWVGRHcmxrcFRCUmZYb29HX1ROZTA2bTE2NmthQmdHclYxY1VXZi1ReGYwX3QxckR0TGFxQ1V4U1V1aXNvOG9mSk5laGw1a09VZGRuVGtCSlczYTRmRTB3?oc=5",
+      "source": "WVTF",
       "date": "2026-09-01"
     }
   ]
