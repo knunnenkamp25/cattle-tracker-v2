@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-16T15:24:59.023Z",
+  "updated": "2026-10-17T14:17:50.274Z",
   "series": [
     {
       "date": "2026-10-05",
@@ -188,9 +188,15 @@
   ],
   "news": [
     {
-      "title": "Know a great farmer? Nominate them for 2027 Master Farmer Award - Farm Progress",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxORzBuQ2RvYVlOdHE4RDIzeHlsU1lIbWFHNjFTMmNXTmt2eTZzb3o2c2hHYVlaTENYQWpjdXBNS1hHMzRFRU05OFd0dFZJWWpQUmZMWE5fQ1FtVjVMRGE0cmhmWHE4cFFDWkxLQnA0eWRfSE9CUl9CM2QtNWhORFlTbXZfcDU1VFpCV0xRWURLdUdhV080ZWhiYlNnbXlWbUFXTnhQVGRuMlQ?oc=5",
-      "source": "Farm Progress",
+      "title": "Live Cattle Futures Hit 10-Week High as Tight U.S. Beef Supplies Lift Prices - AgroLatam",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOSlBTWXljSVNLUkRPeXRXaTg1T2NJR0s1Z2Nhbld2cUlod1hNSXg1V0NjYWZsdWFielJDNjVjMW5rVmNOaVhPOE5vSnlzWWZQQ3VBckp3aVhwazB4ZF9wS0lNUk1XRFBITXJVQjZ1RnlPc242aVMwbzBmdHVSZ0x2Ym1CME5jOHpXbTFaZF9OaVhpR1ZRLXRpcjhVM3I?oc=5",
+      "source": "AgroLatam",
+      "date": "2026-10-17"
+    },
+    {
+      "title": "USDA AMS Beef Market Report: Boxed Beef Cutout, Cattle Summary, Tallow, Protein &amp; Hides - News and Statistics - IndexBox",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPbFlGN0J2QWR4dk9hbjlnZVVaaHpxODQ5bTd6ZU4ycnVfTzRXYklMSDFSbGRoYVB5dXktWVl1Y1FZMVgwSHV3UVpKV3g0QkpPSUYwSGtRYWxKMC1aVjB2dno5RVRKUDJ5dGRqbWEydGMzSWFPNGVxQVdJOHl4NHhaZm5mcGRJNjl2TUpOMEFtWVdielU3cEE?oc=5",
+      "source": "IndexBox",
       "date": "2026-10-16"
     },
     {
@@ -200,15 +206,15 @@
       "date": "2026-10-16"
     },
     {
+      "title": "USDA Boxed Beef Cutout Report October 16, 2026: Choice &amp; Select Values - News and Statistics - IndexBox",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPRXVjc2JfQmI5bGhFdnR5SldBMVJ6aWJVZzVJWFVLNnRIYmc4M0VCQ0lPaHJYbGxhLU15SFR4YmtROVBXMHdqTlZmV3BSYzA5UWY3R3QwMlowUzE1MjZZVGJ5Rnh0Z3hJcEhHaFl1X1ZCR0NTcGRaXzZfa0w4WV9HeG1TNktyakdzQzNQYlRUX0tncXFfT255bXF5TTh4Zw?oc=5",
+      "source": "IndexBox",
+      "date": "2026-10-16"
+    },
+    {
       "title": "Cattle Report - High Plains Journal",
       "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBfSmVLNXRqMkZWSjJMZGpUcFNlV2cydFJWSkQ4dWRiYUlSdl9uWThDRXl2VXR0OGNHTG5uLTBEWDA1ZHpMek9WNFN1Qmw2QVlWMXZuTjdMMWNQUHRQNFZoZlltcEdGUQ?oc=5",
       "source": "High Plains Journal",
-      "date": "2026-10-15"
-    },
-    {
-      "title": "USDA Boxed Beef Cutout Report October 15, 2026: Choice and Select Values - News and Statistics - IndexBox",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNV0N3NTczbEtyNFNLdEl1N01GUmJtd0JNOGNTX0R3T0ljTXQ5NG00VFZreTg0SFo0c0pzd1pXQWhKQl9FbHJkWEZIaHVSQktvZVNKc3gtTExyRk5HOTVXdmpoaWREVFpKZHBId0FpZWs5ZDF5VVdzNzQ5emxuQUZ2aU5DZmt5THVUUE1DWF82V2dqX21LcDE5dXZUVWk4LThY?oc=5",
-      "source": "IndexBox",
       "date": "2026-10-15"
     },
     {
@@ -218,22 +224,16 @@
       "date": "2026-10-13"
     },
     {
-      "title": "USDA Cattle Report: Formulated Base Purchases Drop to 103,584 Head - News and Statistics - IndexBox",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQUnI0RVNBNVIyTF9OWDhhczVYZGJ6VzlRZlRkZjJES2hWV1lxUEZ4NGV1UFRVdTRzVmNpMy1YR2pQaWF5RmprdTg2YlBsbGJSNHEtYnVkZjdhOEFYRTVSRjVZRW1aV2RPS1JaMFhTaUNnbjlrYVRqWm5BaHduUG03R19rRk1LTkhpZ3FCR2xfOGJTOVRNdGJYUU1R?oc=5",
-      "source": "IndexBox",
-      "date": "2026-10-13"
-    },
-    {
       "title": "Weston Livestock Auction Report - October 10, 2026 | USDA Market News - News and Statistics - IndexBox",
       "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNSWJkOTJZS0UtNDBFYWZUZUNVX1VROHp0cmViU1lyMmp0U1dOMXJnX3dOMmtmcmRWVW8zVzF5T00yTHlLcHh1YXJVT19TRGhQWENvdWhmSGdrQXZyazE0VDVvQm9HTmVDUkwxN2NyVmhQd1FuQTBxZHc4TTRCdWFpbzFVOFFpRVdBUlgyQ09NWHB5empHc3c?oc=5",
       "source": "IndexBox",
       "date": "2026-10-11"
     },
     {
-      "title": "Feeder Cattle Futures Hit Three-Month High as Corn Prices Plunge After USDA Report - AgroLatam",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQNVg1ZHpIUmJHTFZudjdndU1oNko1eDhQaHN1S1IzR1dhS1h3RnJLYmM2dXZQcHh1MDNDSWp1WEJqaU14M2tQNThmX05LZTNOU21Edi1YbUdDWVZDMEh2dmx1dVlDNDdLVHFvOFdRNHUzUFhWQk1aNV95SzNQSHIwdnVsaVh0SURVckQ0bTZIYmVFWlBDV0k5a3AzMzI?oc=5",
+      "title": "Hurricane Isaias Brings Flooding and Tornado Threats Across the Eastern US - AgroLatam",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOMV9MbFdGTkpaM0hRaVJtTy1aSnNyaGdFOWdVZnpDSWZhU243amJpbUotcnl6R1V3Q3JRRFJUNlhzb1NPQS1DdGxoV082NFFNdEJ1TC1LdDlQUk1YeXBoOTJBbDZTazFtUEZFN1JGZkxjMUJmN3FqSExtMGZ3b2FYZ2VoZG5KcmU4aHF1bDZVZlNzdDJ1?oc=5",
       "source": "AgroLatam",
-      "date": "2026-10-09"
+      "date": "2026-10-11"
     },
     {
       "title": "USDA National Dairy Comprehensive Report: September 2026 Milk, Feed, and Cattle Prices - News and Statistics - IndexBox",
