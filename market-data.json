@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-17T14:17:50.274Z",
+  "updated": "2026-10-18T14:41:57.551Z",
   "series": [
     {
       "date": "2026-10-05",
@@ -188,6 +188,18 @@
   ],
   "news": [
     {
+      "title": "Cattle slaughter pace slows as USDA reports a sharp drop in January marketings - Brownfield Ag News",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQdEQ4OWJ5LTMxRW5wcDZwS1MwUENTWHUwRUl0UUZDdlZwQTRLbHM3Z1RZVmdDaGtsNWVHTm50WWlfTUhSRDhmUjFlTS02UTRhNVJxei1LM3BQWmU2dWZVYUgwb0RvenJfNm0wY2NpY0g1eG1SN0stRDZwZ3RTTkkyOXAwUzM4dmNuN2VPX2FrNXhWZ1JiSExzSlV2bmV6SF9vVnp5M0RYZUlsWFppQjZBZ0hwUQ?oc=5",
+      "source": "Brownfield Ag News",
+      "date": "2026-10-18"
+    },
+    {
+      "title": "Cattle climb, hogs slide after USDA report - Farm Progress",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQMFZJYUJlNEQ2M0lULTQ3Y3V2clpOS1IxTGFmRlA0alVWUmx6bFFiODVJSTVUanlSYktTX3RtRTJ4VnF0WE9WaGVfcExGMms0SXZLLTNFM1BzRDNqU0NyVmRJRElTclR0U0Q4RUlrN1dENm9JRjFMTndrRDF4LTU5TWwzazByZEptNFpJ?oc=5",
+      "source": "Farm Progress",
+      "date": "2026-10-18"
+    },
+    {
       "title": "Live Cattle Futures Hit 10-Week High as Tight U.S. Beef Supplies Lift Prices - AgroLatam",
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOSlBTWXljSVNLUkRPeXRXaTg1T2NJR0s1Z2Nhbld2cUlod1hNSXg1V0NjYWZsdWFielJDNjVjMW5rVmNOaVhPOE5vSnlzWWZQQ3VBckp3aVhwazB4ZF9wS0lNUk1XRFBITXJVQjZ1RnlPc242aVMwbzBmdHVSZ0x2Ym1CME5jOHpXbTFaZF9OaVhpR1ZRLXRpcjhVM3I?oc=5",
       "source": "AgroLatam",
@@ -196,18 +208,6 @@
     {
       "title": "USDA AMS Beef Market Report: Boxed Beef Cutout, Cattle Summary, Tallow, Protein &amp; Hides - News and Statistics - IndexBox",
       "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPbFlGN0J2QWR4dk9hbjlnZVVaaHpxODQ5bTd6ZU4ycnVfTzRXYklMSDFSbGRoYVB5dXktWVl1Y1FZMVgwSHV3UVpKV3g0QkpPSUYwSGtRYWxKMC1aVjB2dno5RVRKUDJ5dGRqbWEydGMzSWFPNGVxQVdJOHl4NHhaZm5mcGRJNjl2TUpOMEFtWVdielU3cEE?oc=5",
-      "source": "IndexBox",
-      "date": "2026-10-16"
-    },
-    {
-      "title": "Cattle climb, hogs slide after USDA report - Farm Progress",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQMFZJYUJlNEQ2M0lULTQ3Y3V2clpOS1IxTGFmRlA0alVWUmx6bFFiODVJSTVUanlSYktTX3RtRTJ4VnF0WE9WaGVfcExGMms0SXZLLTNFM1BzRDNqU0NyVmRJRElTclR0U0Q4RUlrN1dENm9JRjFMTndrRDF4LTU5TWwzazByZEptNFpJ?oc=5",
-      "source": "Farm Progress",
-      "date": "2026-10-16"
-    },
-    {
-      "title": "USDA Boxed Beef Cutout Report October 16, 2026: Choice &amp; Select Values - News and Statistics - IndexBox",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPRXVjc2JfQmI5bGhFdnR5SldBMVJ6aWJVZzVJWFVLNnRIYmc4M0VCQ0lPaHJYbGxhLU15SFR4YmtROVBXMHdqTlZmV3BSYzA5UWY3R3QwMlowUzE1MjZZVGJ5Rnh0Z3hJcEhHaFl1X1ZCR0NTcGRaXzZfa0w4WV9HeG1TNktyakdzQzNQYlRUX0tncXFfT255bXF5TTh4Zw?oc=5",
       "source": "IndexBox",
       "date": "2026-10-16"
     },
@@ -248,15 +248,15 @@
       "date": "2026-09-18"
     },
     {
-      "title": "Governor Spanberger Stands Alongside Cattlemen Facing Rising Input Costs, Consequences of Trump Administration Plan to Undercut Virginia Beef - Governor of Virginia (.gov)",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNNmdDUmtMTnFzdnpkS1J4Z1kxdUFPd01OMTN2NnM4NjFDa2lmcFZ1NmNVUzY0TzVncWIzUGxHREF5blB4ZV9FMUVqcGtBNXlzTHdwc3VsOTdJUEhtZ3ExRFQ4N01mMHRFZVYtdXZIcWdKazJiZzRacFpVbTZBV3JtUmZmS3ZaU0Q5bjdBV3NqVzBnblN2N2RSb2sxSGt2YmM?oc=5",
-      "source": "Governor of Virginia (.gov)",
-      "date": "2026-09-01"
-    },
-    {
       "title": "Virginia cattle farmers react to new beef import policy - WDBJ7",
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPeVlGVC1ndmVucmlORWJFd3NUU1NaNjE5bE1YbUgzbS1QS0RKZEY4OE9xNUt4eFp1Zm83RWhEMXJ3RjNqNVZ1eWNuNlNuNkNxRExpTzRwaV9NRmFBcWxDUzhhVm54c1ZXTUQ2QXJVZVdiUHVVZ1U2dTYyZExpYUdPa3Q4X3BaUzBUckRfUTFfONIBowFBVV95cUxQMlU4SEFhTW9nVGZKTXUyVHptcGJpajVwWTI0QlFWZHhXZktmVmFQeUFoMmdVVktPV1RxeTVLbXhIc2R2Tzg2NW5ySXgxQkJYMlN4VTVTNENyeU03d2h3c2N0cktqQ19lc2xORExvRThpazJFT21FMjhzYVIxUnRRNzZqRXB3Z0FZeDlZWTVoSlkzTnNtV3Z5bkNzQ1B0ZmViS25B?oc=5",
       "source": "WDBJ7",
+      "date": "2026-09-01"
+    },
+    {
+      "title": "Governor Spanberger Stands Alongside Cattlemen Facing Rising Input Costs, Consequences of Trump Administration Plan to Undercut Virginia Beef - Governor of Virginia (.gov)",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNNmdDUmtMTnFzdnpkS1J4Z1kxdUFPd01OMTN2NnM4NjFDa2lmcFZ1NmNVUzY0TzVncWIzUGxHREF5blB4ZV9FMUVqcGtBNXlzTHdwc3VsOTdJUEhtZ3ExRFQ4N01mMHRFZVYtdXZIcWdKazJiZzRacFpVbTZBV3JtUmZmS3ZaU0Q5bjdBV3NqVzBnblN2N2RSb2sxSGt2YmM?oc=5",
+      "source": "Governor of Virginia (.gov)",
       "date": "2026-09-01"
     }
   ]
