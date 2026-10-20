@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19T17:36:01.313Z",
+  "updated": "2026-10-20T15:42:05.100Z",
   "series": [
     {
       "date": "2026-10-05",
@@ -192,20 +192,32 @@
   ],
   "news": [
     {
+      "title": "U.S. Cattle Prices Climb as Key USDA Report Tests Market Momentum - AgroLatam",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNTFcybURLMXZUMVNKQ0dEYWhDTWFPcXA5VjZBdjIybkh5SE8zX0ZsWHBwNHYtOG1lQVlXUHdsR1pvS0d3ZG5WYXJwU1otRWdaeWp5WVZqV0tmeWcxZ2pvQm1EOEY2MjhWUzU0eWxTdDFoLXJwTlduei1tUC0td1dvOTItWDlmSnRseU1jdE5qckV1NUU?oc=5",
+      "source": "AgroLatam",
+      "date": "2026-10-20"
+    },
+    {
+      "title": "USDA Feeder Cattle Report: Mixed Auction Ranges Across Major Markets - News and Statistics - IndexBox",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQNk45b3dBOThubHpPYXA1Z0RyV3lWWXo3RkpQbXhmNUhsQTU2NmQ1bGdFSS1uODc2aXVKVHhmdldLc09yQXM1djlNdk1QbGFFd1VUVXRJczd0NUtIWlpaaDVFZnVmQVpjZkNfRVBaUXBuNlF4SU9VWE00ZnVpRXJlUDBhbi0wMnEwZ0RuazFubzdFR3gzbUJPck9pYkVWRE1EV1NySmxB?oc=5",
+      "source": "IndexBox",
+      "date": "2026-10-20"
+    },
+    {
+      "title": "Why USDA’s Proposed Heifer-Retention Insurance Could Distort the Cattle Market - Drovers Magazine",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPY1g5OERxdUNheURNUWZBZjR3dF9ocUpZRUhwaWxzeVZOaUpkN2x1QjhWa1JNbWpOa3RMRUpWS2ZEVnBUTUpQWTV5UHdacVNwTVZKRHBZa3hIdDhDT0VEVzg0UEsyZkMycDV0UTN4SlRzenFjRnJjdWpCZEQ1cVJ3V0hzcHpfQmFvdGZQYnduMnNmLVZteWhsbzhIVVktWmhwT3ozMA?oc=5",
+      "source": "Drovers Magazine",
+      "date": "2026-10-19"
+    },
+    {
       "title": "Cattle climb, hogs slide after USDA report - Farm Progress",
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQMFZJYUJlNEQ2M0lULTQ3Y3V2clpOS1IxTGFmRlA0alVWUmx6bFFiODVJSTVUanlSYktTX3RtRTJ4VnF0WE9WaGVfcExGMms0SXZLLTNFM1BzRDNqU0NyVmRJRElTclR0U0Q4RUlrN1dENm9JRjFMTndrRDF4LTU5TWwzazByZEptNFpJ?oc=5",
       "source": "Farm Progress",
       "date": "2026-10-19"
     },
     {
-      "title": "USDA Slaughter Cattle Report: Formula and Grid Prices, October 19, 2026 - News and Statistics - IndexBox",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPWGVwc0ptMkthTkZMRDZkUEVtTXdjSkxNRnNxU19rM01mSktPQUFwR2JFNEFTSFNkVWIwUkZJWnI0Vk5hZ3RwenJvQ3U3T2ViU1dFOGVZVmVVYVBuZHlnSWRnaUVDSlllUjdGNGh4X2M1VzV0UW1BVDR6RWM3M19aRDRYUmFaMjhYYXNXUkJTbmNvQzJyMTd3V0xtUQ?oc=5",
-      "source": "IndexBox",
-      "date": "2026-10-19"
-    },
-    {
-      "title": "USDA Feeder Cattle Report: Mixed Ranges at Ft. Pierre, Crawford, Herreid Auctions - News and Statistics - IndexBox",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNcDBncXhfeWtVaW5uRDhsUlA1eDdtOTF3UGVHUEx1YmtDWGY5U3dkTGJFeWxzWGNzM1A0bUtmeTlhT3YwSFdUclFMR3BaQ1d5VlVDREh6dE1nU2JRbndLWlBSdGJ2X1dkX3VraXdQMFZZOFdDM3UtcWtHM2JNWXZPbEdDZ090c3JoTm5jS21sOWNwX2JfbkN0TE55MEpld3MxbGtTc01FaG1qdw?oc=5",
+      "title": "USDA Beef Market Report October 19, 2026: Cutout Prices, Slaughter, By-Products - News and Statistics - IndexBox",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOd1lXanJiRUhkNXI3MnoyYnFGdHZna1k4aXJ3SHpiSlpmUWpyc2dEbDZkY3VOeVd3X0ZKa0NwckFaeTgwQ3c0RTNZRmNVUDRqSFNyQUtFN204OTlhSkFjQ2tJdFBKT2w3U0pqODctNmxpZlIwZmZzYkJ3V3piSW4yQWFWbE82M2lwMFlCY0Y4cjhwTWZ6UHQ5dzRGek9VZHVVNjZQSTRzVXFpc3dtVkRWNTlIcnRTTXVkY1duSU4tTWliRXZPNEE?oc=5",
       "source": "IndexBox",
       "date": "2026-10-19"
     },
@@ -250,18 +262,6 @@
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNXzNOelZNTkFjRUNKWl9GazdlTXI4YjNmZUlnLXU1dnZRZC10QTJLRkk0UlhfTEpkWmU0RF83a3YxaEJMU2p4OGVvQ3k3N1Rtc1lpRmFrMzliMndzaGVtUEk2cVJ1dElwTHFScVZyMFc5aVhrMFhPTElFWGpsOXloSl9Vb3lPbE90clZNLVF5MEZDZS12bWYyY0E4bFZHeGZxTnBfaDFEMzU3UQ?oc=5",
       "source": "Pro Farmer",
       "date": "2026-09-18"
-    },
-    {
-      "title": "Virginia cattle farmers react to new beef import policy - WDBJ7",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPeVlGVC1ndmVucmlORWJFd3NUU1NaNjE5bE1YbUgzbS1QS0RKZEY4OE9xNUt4eFp1Zm83RWhEMXJ3RjNqNVZ1eWNuNlNuNkNxRExpTzRwaV9NRmFBcWxDUzhhVm54c1ZXTUQ2QXJVZVdiUHVVZ1U2dTYyZExpYUdPa3Q4X3BaUzBUckRfUTFfONIBowFBVV95cUxQMlU4SEFhTW9nVGZKTXUyVHptcGJpajVwWTI0QlFWZHhXZktmVmFQeUFoMmdVVktPV1RxeTVLbXhIc2R2Tzg2NW5ySXgxQkJYMlN4VTVTNENyeU03d2h3c2N0cktqQ19lc2xORExvRThpazJFT21FMjhzYVIxUnRRNzZqRXB3Z0FZeDlZWTVoSlkzTnNtV3Z5bkNzQ1B0ZmViS25B?oc=5",
-      "source": "WDBJ7",
-      "date": "2026-09-01"
-    },
-    {
-      "title": "Governor Spanberger Stands Alongside Cattlemen Facing Rising Input Costs, Consequences of Trump Administration Plan to Undercut Virginia Beef - Governor of Virginia (.gov)",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNNmdDUmtMTnFzdnpkS1J4Z1kxdUFPd01OMTN2NnM4NjFDa2lmcFZ1NmNVUzY0TzVncWIzUGxHREF5blB4ZV9FMUVqcGtBNXlzTHdwc3VsOTdJUEhtZ3ExRFQ4N01mMHRFZVYtdXZIcWdKazJiZzRacFpVbTZBV3JtUmZmS3ZaU0Q5bjdBV3NqVzBnblN2N2RSb2sxSGt2YmM?oc=5",
-      "source": "Governor of Virginia (.gov)",
-      "date": "2026-09-01"
     }
   ]
 }
