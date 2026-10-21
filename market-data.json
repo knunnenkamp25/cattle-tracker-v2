@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-20T15:42:05.100Z",
+  "updated": "2026-10-21T16:00:16.383Z",
   "series": [
     {
       "date": "2026-10-05",
@@ -24,9 +24,67 @@
     {
       "date": "2026-10-19",
       "price": 397.5
+    },
+    {
+      "date": "2026-10-20",
+      "price": 402.5
     }
   ],
   "auctions": [
+    {
+      "code": "RH_LS149",
+      "name": "Wytheville VA Livestock Auction",
+      "location": "Richmond, VA",
+      "report_date": "2026-10-20",
+      "head": 610,
+      "categories": [
+        {
+          "label": "Steers 400-500 lb",
+          "low": "390",
+          "high": "443"
+        },
+        {
+          "label": "Steers 500-600 lb",
+          "low": "380",
+          "high": "400"
+        },
+        {
+          "label": "Steers 600-700 lb",
+          "low": "337",
+          "high": "349"
+        },
+        {
+          "label": "Heifers 400-500 lb",
+          "low": "387",
+          "high": "413"
+        },
+        {
+          "label": "Heifers 500-600 lb",
+          "low": "330",
+          "high": "352"
+        },
+        {
+          "label": "Heifers 600-700 lb",
+          "low": "308",
+          "high": "325"
+        },
+        {
+          "label": "Bulls 400-500 lb",
+          "low": "400",
+          "high": "400"
+        },
+        {
+          "label": "Bulls 500-600 lb",
+          "low": "355",
+          "high": "355"
+        },
+        {
+          "label": "Bulls 600-700 lb",
+          "low": "315",
+          "high": "315"
+        }
+      ]
+    },
     {
       "code": "RH_LS151",
       "name": "Staunton VA Livestock Auction",
@@ -134,73 +192,43 @@
           "high": "365"
         }
       ]
-    },
-    {
-      "code": "RH_LS149",
-      "name": "Wytheville VA Livestock Auction",
-      "location": "Richmond, VA",
-      "report_date": "2026-10-13",
-      "head": 356,
-      "categories": [
-        {
-          "label": "Steers 400-500 lb",
-          "low": "415",
-          "high": "475"
-        },
-        {
-          "label": "Steers 500-600 lb",
-          "low": "350",
-          "high": "400"
-        },
-        {
-          "label": "Steers 600-700 lb",
-          "low": "330",
-          "high": "368"
-        },
-        {
-          "label": "Heifers 400-500 lb",
-          "low": "380",
-          "high": "440"
-        },
-        {
-          "label": "Heifers 500-600 lb",
-          "low": "305",
-          "high": "360"
-        },
-        {
-          "label": "Heifers 600-700 lb",
-          "low": "297",
-          "high": "340"
-        },
-        {
-          "label": "Bulls 400-500 lb",
-          "low": "430",
-          "high": "465"
-        },
-        {
-          "label": "Bulls 500-600 lb",
-          "low": "365",
-          "high": "400"
-        },
-        {
-          "label": "Bulls 600-700 lb",
-          "low": "295",
-          "high": "340"
-        }
-      ]
     }
   ],
   "news": [
     {
-      "title": "U.S. Cattle Prices Climb as Key USDA Report Tests Market Momentum - AgroLatam",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNTFcybURLMXZUMVNKQ0dEYWhDTWFPcXA5VjZBdjIybkh5SE8zX0ZsWHBwNHYtOG1lQVlXUHdsR1pvS0d3ZG5WYXJwU1otRWdaeWp5WVZqV0tmeWcxZ2pvQm1EOEY2MjhWUzU0eWxTdDFoLXJwTlduei1tUC0td1dvOTItWDlmSnRseU1jdE5qckV1NUU?oc=5",
+      "title": "USDA adds regional cash cattle report to improve price transparency - The National Provisioner",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOU1FFdlZZYXNGbDM0Z2VzWmZIZFBGZmxGd3h1NEtUMTBmRnZueFllZnlNeGljUE54MHhVem5Id2NBQ1VDSWFqU1E0Ukd0c0p3eXdGd1ZiUEY2UjI5VnRpejd6RHRnWnhSMkpia0hjUHotZGFSVFY1bFdGN2h2bXhabV95VWFSeE5rQnRMUlR5NWxNVV9Ca1h6X29LbG4yZnlUSXVYSXNWMmZOcXMya3g4UEVIcGtBRWln?oc=5",
+      "source": "The National Provisioner",
+      "date": "2026-10-21"
+    },
+    {
+      "title": "Cattle Imports Return as U.S. Beef Prices Squeeze Family Budgets - AgroLatam",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNWFdzaG1meGVYZkQ2ZFltWHBXUThYMUpYYS1STGp3cFc5ZHFYb3RRREhNbnZvQ3JfeDRnbFVuam41NkN5RS1lRGl3YlB5dDJmTzNVeUE2RWZGWmgwZUJQbzVKd1RRbEw2MlJUbTd4Slhxa01lbFBXYUxwX0FEanRVV2puU1lZRDVDMWJRYldJcUtmZDhwcjB0em5zb3ppQQ?oc=5",
       "source": "AgroLatam",
+      "date": "2026-10-21"
+    },
+    {
+      "title": "Cattle climb, hogs slide after USDA report - Farm Progress",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQMFZJYUJlNEQ2M0lULTQ3Y3V2clpOS1IxTGFmRlA0alVWUmx6bFFiODVJSTVUanlSYktTX3RtRTJ4VnF0WE9WaGVfcExGMms0SXZLLTNFM1BzRDNqU0NyVmRJRElTclR0U0Q4RUlrN1dENm9JRjFMTndrRDF4LTU5TWwzazByZEptNFpJ?oc=5",
+      "source": "Farm Progress",
+      "date": "2026-10-21"
+    },
+    {
+      "title": "Following President Trump's Executive Orders, USDA Updates its Cash Cattle Market Reports to Advance Transparency - USDA (.gov)",
+      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQRjQwN052d0RDczl6QW5obEYyZm1mampRZ280NGJHMW1QR09zUGtuQ01McGpsODhxbGktX0tpSDZ6bno1b1RJYUtmX19Md01OLWdkLTBBbkQ5M2VSd2lJRWh3UjMzOU1UQXpvYTI1c2dyNmVPN3lWZzlWbHBLTmdscXZNT2Q5U2RjUFFFMWl2VVYwMEoxdE9jR2ktZ2p0b18tajRRaDQ5UHZyMEF4Vjh0WGRSWHJIamdXdUlaZWYxQ0lTUF9ISHdEaERWUFhLQkg1RXZSakVCaUZvYUwtMUdrQTV4MWQ0Q1NESVdwNmJ6WQ?oc=5",
+      "source": "USDA (.gov)",
       "date": "2026-10-20"
     },
     {
-      "title": "USDA Feeder Cattle Report: Mixed Auction Ranges Across Major Markets - News and Statistics - IndexBox",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQNk45b3dBOThubHpPYXA1Z0RyV3lWWXo3RkpQbXhmNUhsQTU2NmQ1bGdFSS1uODc2aXVKVHhmdldLc09yQXM1djlNdk1QbGFFd1VUVXRJczd0NUtIWlpaaDVFZnVmQVpjZkNfRVBaUXBuNlF4SU9VWE00ZnVpRXJlUDBhbi0wMnEwZ0RuazFubzdFR3gzbUJPck9pYkVWRE1EV1NySmxB?oc=5",
+      "title": "USDA Boxed Beef Cutout Values: October 20, 2026 Report - News and Statistics - IndexBox",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOSmJlUHBWRHVKajBIZ2llN0ExaUJGZ1pRdVpwaW1EbjkyeVIwdU5xT1FzVGd0Mk5XT2YxTGdER0pMbkJMNEtTci1NLUhPa0lpWHY0bVBtWWt1eW5ud1lKamhkcVFZczdjaU92VS1iMUdhQW9WSGxzWWVkN05iR2piLURIeTdXcFMybjZDekpqMA?oc=5",
       "source": "IndexBox",
+      "date": "2026-10-20"
+    },
+    {
+      "title": "U.S. Cattle Futures Surge as Tight Supplies Push Beef Prices to New Highs - AgroLatam",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOMU9JNzYyeEx6QWJqU2NEeVREYnNpTnZMWUxuZTlLN1pkZFNsQkZQaTU1OE9XVWRDTDlZaGFHZk5LZXowYTFXX2FqQVJxTHV0bzUwYXVtZ2YxUzh3blM0U2c3RUdVcGo2N1FyTlUtdS1oWGFadWJzbkZQRzJkdG1BaHB4Z2NZSFA1NFVqa2pnNVFLZkk3MV9jSTl6R3U?oc=5",
+      "source": "AgroLatam",
       "date": "2026-10-20"
     },
     {
@@ -210,40 +238,10 @@
       "date": "2026-10-19"
     },
     {
-      "title": "Cattle climb, hogs slide after USDA report - Farm Progress",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQMFZJYUJlNEQ2M0lULTQ3Y3V2clpOS1IxTGFmRlA0alVWUmx6bFFiODVJSTVUanlSYktTX3RtRTJ4VnF0WE9WaGVfcExGMms0SXZLLTNFM1BzRDNqU0NyVmRJRElTclR0U0Q4RUlrN1dENm9JRjFMTndrRDF4LTU5TWwzazByZEptNFpJ?oc=5",
-      "source": "Farm Progress",
-      "date": "2026-10-19"
-    },
-    {
-      "title": "USDA Beef Market Report October 19, 2026: Cutout Prices, Slaughter, By-Products - News and Statistics - IndexBox",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOd1lXanJiRUhkNXI3MnoyYnFGdHZna1k4aXJ3SHpiSlpmUWpyc2dEbDZkY3VOeVd3X0ZKa0NwckFaeTgwQ3c0RTNZRmNVUDRqSFNyQUtFN204OTlhSkFjQ2tJdFBKT2w3U0pqODctNmxpZlIwZmZzYkJ3V3piSW4yQWFWbE82M2lwMFlCY0Y4cjhwTWZ6UHQ5dzRGek9VZHVVNjZQSTRzVXFpc3dtVkRWNTlIcnRTTXVkY1duSU4tTWliRXZPNEE?oc=5",
-      "source": "IndexBox",
-      "date": "2026-10-19"
-    },
-    {
-      "title": "Live Cattle Futures Hit 10-Week High as Tight U.S. Beef Supplies Lift Prices - AgroLatam",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOSlBTWXljSVNLUkRPeXRXaTg1T2NJR0s1Z2Nhbld2cUlod1hNSXg1V0NjYWZsdWFielJDNjVjMW5rVmNOaVhPOE5vSnlzWWZQQ3VBckp3aVhwazB4ZF9wS0lNUk1XRFBITXJVQjZ1RnlPc242aVMwbzBmdHVSZ0x2Ym1CME5jOHpXbTFaZF9OaVhpR1ZRLXRpcjhVM3I?oc=5",
-      "source": "AgroLatam",
-      "date": "2026-10-17"
-    },
-    {
-      "title": "Cattle Report - High Plains Journal",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBfSmVLNXRqMkZWSjJMZGpUcFNlV2cydFJWSkQ4dWRiYUlSdl9uWThDRXl2VXR0OGNHTG5uLTBEWDA1ZHpMek9WNFN1Qmw2QVlWMXZuTjdMMWNQUHRQNFZoZlltcEdGUQ?oc=5",
-      "source": "High Plains Journal",
-      "date": "2026-10-15"
-    },
-    {
       "title": "Cattle Market Standoff: Shrinking Supply Meets Stalled Wholesale Beef Prices - Drovers Magazine",
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPZDIyblJGTC1pMVI1aktudC00VXA3eW5SOS1rRUdtZ2lyamJiNl82eVNBOHBMR0stUjdnaG5Tb0tyNWJab2pMNFlOS2ZhUDM0ZGpNVi15cmVWQ09EeXQtVnVxTjc2ak55TV83V1VmX3dKX1ZQeTBBSTRERDF4VEl5Q1hXWVNpV1Y3NVhCMS1SVVhRQi1wc1dVTklaSklUanNhUU5hNDJhUQ?oc=5",
       "source": "Drovers Magazine",
       "date": "2026-10-13"
-    },
-    {
-      "title": "Weston Livestock Auction Report - October 10, 2026 | USDA Market News - News and Statistics - IndexBox",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNSWJkOTJZS0UtNDBFYWZUZUNVX1VROHp0cmViU1lyMmp0U1dOMXJnX3dOMmtmcmRWVW8zVzF5T00yTHlLcHh1YXJVT19TRGhQWENvdWhmSGdrQXZyazE0VDVvQm9HTmVDUkwxN2NyVmhQd1FuQTBxZHc4TTRCdWFpbzFVOFFpRVdBUlgyQ09NWHB5empHc3c?oc=5",
-      "source": "IndexBox",
-      "date": "2026-10-11"
     },
     {
       "title": "Hurricane Isaias Brings Flooding and Tornado Threats Across the Eastern US - AgroLatam",
@@ -262,6 +260,12 @@
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNXzNOelZNTkFjRUNKWl9GazdlTXI4YjNmZUlnLXU1dnZRZC10QTJLRkk0UlhfTEpkWmU0RF83a3YxaEJMU2p4OGVvQ3k3N1Rtc1lpRmFrMzliMndzaGVtUEk2cVJ1dElwTHFScVZyMFc5aVhrMFhPTElFWGpsOXloSl9Vb3lPbE90clZNLVF5MEZDZS12bWYyY0E4bFZHeGZxTnBfaDFEMzU3UQ?oc=5",
       "source": "Pro Farmer",
       "date": "2026-09-18"
+    },
+    {
+      "title": "Virginia Market News Service weekly ag brief — Sept. 4, 2026 - The Tidewater News",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQdTB5X1hueXVLaDFWNUF6QVV4R0k5Qm9DYnMwX0kzaVZjVlJSNVU4cnczZ1dscUdiNmRWQWFfNUFFcFJQb3BwSUZWdjNfeEJweC1vRFgyb25adXc3WktKeVVTRnBaV2RsZkxkSmdvYkJFTUFDaHNweXhfSklDM043SHZUak4yZnlOQ3N5WjNWdHNNbERySFljSVJReW5FYzAtNTZwamtkRTdJWi1EYWlFeQ?oc=5",
+      "source": "The Tidewater News",
+      "date": "2026-09-08"
     }
   ]
 }
