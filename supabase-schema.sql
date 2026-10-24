@@ -146,3 +146,21 @@ drop policy if exists "photos deletable by signed-in" on storage.objects;
 create policy "photos deletable by signed-in"
   on storage.objects for delete to authenticated
   using ( bucket_id = 'animal-photos' );
+
+
+-- ============================================================
+-- Data API grants (required for tables created on/after 2026-10-30).
+-- Restores the access Supabase used to grant automatically.
+-- RLS policies still control who can read/write rows; these are the
+-- table-level privileges PostgREST / supabase-js need in addition to RLS.
+-- Safe to re-run.
+-- ============================================================
+grant usage on schema public to anon, authenticated, service_role;
+
+grant all on all tables    in schema public to anon, authenticated, service_role;
+grant all on all routines  in schema public to anon, authenticated, service_role;
+grant all on all sequences in schema public to anon, authenticated, service_role;
+
+alter default privileges in schema public grant all on tables    to anon, authenticated, service_role;
+alter default privileges in schema public grant all on routines  to anon, authenticated, service_role;
+alter default privileges in schema public grant all on sequences to anon, authenticated, service_role;
