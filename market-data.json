@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25T14:58:54.898Z",
+  "updated": "2026-10-26T17:28:51.365Z",
   "series": [
     {
       "date": "2026-10-05",
@@ -32,6 +32,10 @@
     {
       "date": "2026-10-21",
       "price": 402.5
+    },
+    {
+      "date": "2026-10-26",
+      "price": 404.17
     }
   ],
   "auctions": [
@@ -39,53 +43,107 @@
       "code": "RH_LS151",
       "name": "Staunton VA Livestock Auction",
       "location": "Richmond, VA",
-      "report_date": "2026-10-21",
-      "head": 1124,
+      "report_date": "2026-10-26",
+      "head": 1409,
       "categories": [
         {
           "label": "Steers 400-500 lb",
-          "low": "410",
-          "high": "489"
+          "low": "460",
+          "high": "500"
         },
         {
           "label": "Steers 500-600 lb",
-          "low": "365",
-          "high": "430"
+          "low": "394",
+          "high": "459"
         },
         {
           "label": "Steers 600-700 lb",
-          "low": "332",
-          "high": "392"
+          "low": "360",
+          "high": "403"
         },
         {
           "label": "Heifers 400-500 lb",
-          "low": "374",
-          "high": "374"
+          "low": "340",
+          "high": "365"
         },
         {
           "label": "Heifers 500-600 lb",
-          "low": "280",
-          "high": "340"
+          "low": "338",
+          "high": "350"
         },
         {
           "label": "Heifers 600-700 lb",
-          "low": "318",
-          "high": "318"
+          "low": "290",
+          "high": "326"
         },
         {
           "label": "Bulls 400-500 lb",
-          "low": "420",
-          "high": "431"
+          "low": "425",
+          "high": "531"
         },
         {
           "label": "Bulls 500-600 lb",
-          "low": "376",
-          "high": "376"
+          "low": "350",
+          "high": "377"
         },
         {
           "label": "Bulls 600-700 lb",
-          "low": "321",
-          "high": "321"
+          "low": "325",
+          "high": "325"
+        }
+      ]
+    },
+    {
+      "code": "RH_LS152",
+      "name": "Tri-State VA Livestock Auction",
+      "location": "Richmond, VA",
+      "report_date": "2026-10-26",
+      "head": 1510,
+      "categories": [
+        {
+          "label": "Steers 400-500 lb",
+          "low": "420",
+          "high": "498"
+        },
+        {
+          "label": "Steers 500-600 lb",
+          "low": "390",
+          "high": "402"
+        },
+        {
+          "label": "Steers 600-700 lb",
+          "low": "345",
+          "high": "375"
+        },
+        {
+          "label": "Heifers 400-500 lb",
+          "low": "375",
+          "high": "455"
+        },
+        {
+          "label": "Heifers 500-600 lb",
+          "low": "330",
+          "high": "385"
+        },
+        {
+          "label": "Heifers 600-700 lb",
+          "low": "315",
+          "high": "325"
+        },
+        {
+          "label": "Bulls 400-500 lb",
+          "low": "435",
+          "high": "500"
+        },
+        {
+          "label": "Bulls 500-600 lb",
+          "low": "270",
+          "high": "435"
+        },
+        {
+          "label": "Bulls 600-700 lb",
+          "low": "300",
+          "high": "343"
         }
       ]
     },
@@ -142,73 +200,19 @@
           "high": "315"
         }
       ]
-    },
-    {
-      "code": "RH_LS152",
-      "name": "Tri-State VA Livestock Auction",
-      "location": "Richmond, VA",
-      "report_date": "2026-10-19",
-      "head": 1524,
-      "categories": [
-        {
-          "label": "Steers 400-500 lb",
-          "low": "445",
-          "high": "545"
-        },
-        {
-          "label": "Steers 500-600 lb",
-          "low": "390",
-          "high": "450"
-        },
-        {
-          "label": "Steers 600-700 lb",
-          "low": "330",
-          "high": "385"
-        },
-        {
-          "label": "Heifers 400-500 lb",
-          "low": "370",
-          "high": "450"
-        },
-        {
-          "label": "Heifers 500-600 lb",
-          "low": "330",
-          "high": "425"
-        },
-        {
-          "label": "Heifers 600-700 lb",
-          "low": "300",
-          "high": "345"
-        },
-        {
-          "label": "Bulls 400-500 lb",
-          "low": "410",
-          "high": "490"
-        },
-        {
-          "label": "Bulls 500-600 lb",
-          "low": "355",
-          "high": "430"
-        },
-        {
-          "label": "Bulls 600-700 lb",
-          "low": "315",
-          "high": "365"
-        }
-      ]
     }
   ],
   "news": [
     {
+      "title": "USDA Feeder Cattle Report October 26, 2026: Auction Prices, Futures, Slaughter - News and Statistics - IndexBox",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQNjdVSWxGcndXWGw4dTJGRzFkR2JJdWNpN05fODdwVV9pWlNQWTlzUHlrOGhNTXhLSldUenlVbEZFVU5uMjNwS2lBSVpxY1luUl9MNk1WejdocnlrQlYzRzdoYU1DWG5sZ1MzVV9QTEV5dmd1WnR6RkVUaXJNVzVLTzVMbzVSR01ma3VKQ3dKMkoyempJVWZfWkdqOFhscmZKMmc?oc=5",
+      "source": "IndexBox",
+      "date": "2026-10-26"
+    },
+    {
       "title": "October 2026 USDA Cattle on Feed highlights - Beef Magazine",
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOMy05T1hJal9oaHVla1p0TFE0OXNaRjNGSkdWMTN3UURRc1ZhZXNQUFk3QUxpaXAwd1ozbTNOcVVSUXBnSDBLQnZMTFRQeDltc09NYlRhQjRNaXlycjA5WFROaFZIaW1PWUI2b3AxRl9FdXFWcERsaXJ6Q3FtWFFNWDRYMVliX2hQQ1FwTA?oc=5",
       "source": "Beef Magazine",
-      "date": "2026-10-23"
-    },
-    {
-      "title": "As Cash Trade Shrinks, USDA Expands Regional Cattle Market Reporting - DTN Progressive Farmer",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNbFZFUWZwUW43ZDZ1Z0t4aGNZOEF3dVdlTGxMcGs2XzVLbDN1Z0VhN3FkX0NoTVBHU196RnE3VXE1VFNrZExsb3pWanJGYVZ2Zm9DUHJCZ3JrZTFHMU5WQ09Bd0VkZHFaZVd6V0JnaEdHYkhTVU51REZnTkdwZlg5eWpxOWo1V1R6aUwzcFlXMk5HTVFJdXJReXYtcnR6ZFB6XzBHQUYzaUt6QQ?oc=5",
-      "source": "DTN Progressive Farmer",
       "date": "2026-10-23"
     },
     {
@@ -218,16 +222,16 @@
       "date": "2026-10-23"
     },
     {
+      "title": "As Cash Trade Shrinks, USDA Expands Regional Cattle Market Reporting - DTN Progressive Farmer",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNTHN0NzdBdWJrZ0JNX19uTVQ4YjFBdHF6RWhfLVFuSzk5TFZyT0JjN2xnTmRpY0xWYkFlUG1FLVNzLV9ldWxHd3NMWFo2MkxGdTViVmZwejYyUzEwWUw3SlJRSmx0S3RKOGpoeVFQU1VOeUU3RUh6RzJ4LWIzOFk5bjRHd3k1RkdGbGtha0R5bFhHbkZCODg4TGZnWnNZR0pEU0g0?oc=5",
+      "source": "DTN Progressive Farmer",
+      "date": "2026-10-23"
+    },
+    {
       "title": "USDA to issue new report on cattle prices - Capital Press",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOSlBrRk1Vd1dLT1FOclU0bVYxT2NTLVlSQzl5WXFlOXM4R1k4V29ZcVBQZ3NHTFY0VTMteGtLMVVwSzdJbG80STlZUGpjSnVDNFVvSnFoU1dVU3ZaMXc5dUxTSEZ6QUNKWXEtbmNUV3JKam5yNkU4UTJNVmprcWMzZTdVTVY?oc=5",
       "source": "Capital Press",
       "date": "2026-10-22"
-    },
-    {
-      "title": "USDA adds regional cash cattle report to improve price transparency - The National Provisioner",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOU1FFdlZZYXNGbDM0Z2VzWmZIZFBGZmxGd3h1NEtUMTBmRnZueFllZnlNeGljUE54MHhVem5Id2NBQ1VDSWFqU1E0Ukd0c0p3eXdGd1ZiUEY2UjI5VnRpejd6RHRnWnhSMkpia0hjUHotZGFSVFY1bFdGN2h2bXhabV95VWFSeE5rQnRMUlR5NWxNVV9Ca1h6X29LbG4yZnlUSXVYSXNWMmZOcXMya3g4UEVIcGtBRWln?oc=5",
-      "source": "The National Provisioner",
-      "date": "2026-10-21"
     },
     {
       "title": "Following President Trump's Executive Orders, USDA Updates its Cash Cattle Market Reports to Advance Transparency - USDA (.gov)",
@@ -236,10 +240,10 @@
       "date": "2026-10-20"
     },
     {
-      "title": "U.S. Cattle Prices Climb as Key USDA Report Tests Market Momentum - AgroLatam",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNTFcybURLMXZUMVNKQ0dEYWhDTWFPcXA5VjZBdjIybkh5SE8zX0ZsWHBwNHYtOG1lQVlXUHdsR1pvS0d3ZG5WYXJwU1otRWdaeWp5WVZqV0tmeWcxZ2pvQm1EOEY2MjhWUzU0eWxTdDFoLXJwTlduei1tUC0td1dvOTItWDlmSnRseU1jdE5qckV1NUU?oc=5",
-      "source": "AgroLatam",
-      "date": "2026-10-20"
+      "title": "USDA Cattle on Feed report provides bullish signal for the cattle market - Brownfield Ag News",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPYW5OQVZvejFhbUpkUmU4b1dIVVhIbTF0UDR4emQ4aXNpYW9DVXpLQS1DQ1ZQVHVOcll4MVNUNThyUGhOYTZVVWlKaVNMWGprM3BMSlZySUdFU1V6cW8wQUdFSnRQcEVRU3FsS3ZiMkJ6a29RRy1xQ3NkWFR3Q3FqZmhXUDZEd0dhM01pdXl1NUVIRjhTQmRNWVJJdGZPQnI0Ti1iMEEtMkxPWGc?oc=5",
+      "source": "Brownfield Ag News",
+      "date": "2026-10-16"
     },
     {
       "title": "Cattle Market Standoff: Shrinking Supply Meets Stalled Wholesale Beef Prices - Drovers Magazine",
