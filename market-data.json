@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29T17:28:26.377Z",
+  "updated": "2026-10-30T17:03:38.990Z",
   "series": [
     {
       "date": "2026-10-05",
@@ -208,15 +208,27 @@
   ],
   "news": [
     {
+      "title": "USDA Report: Negotiated Cash Cattle Purchases Jump on October 30, 2026 - News and Statistics - IndexBox",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQOFhnMmVsV3VEOUdjU0RldmZSYXp2XzZjd1hIaDhkTGJ3Z1EtMGlHTU5qU1FpT3V1MmRZZUVmdmlzU0xKVVZLZ0xtTmI5NlJpaTVHd0IzNzBNbGpXQ2g1LTBSMzdCLVRQN1JCZGtXUGsxUzlxZ2Jkdl9WdU5OS3NndDJUdkR5aGEzRVR4eXFaQ0IzalJTZnJ5Tktn?oc=5",
+      "source": "IndexBox",
+      "date": "2026-10-30"
+    },
+    {
+      "title": "USDA loan backs Panhandle beef plant as cattle supplies stay tight - Plainview Herald",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNeEpkaWhVN3lwNElyeW9nLVNhZWQ0MFFmVkxNek1iSWxRSEdZdm9va1J0eDdGZkd0cjgyU00xeEZFblpvNDEtN2dhQVFRaFZPZnlSOHFaX3gzNnBtUW13bWZteGQ1UHdaNXY1MlhKQlFPM254cklxbTA2NlYzQzduUHkyU0lhbFk?oc=5",
+      "source": "Plainview Herald",
+      "date": "2026-10-30"
+    },
+    {
+      "title": "USDA backs $24.6M loan to build Texas beef plant - Beef Magazine",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPM2tWei1CNUdCYmx1SW1GaldCYmxLTTBlaVk3U3c1c1Z5RE8ybXVXbUFuWGpnUE52RTZ2cl9lWmtLT1g5Sy02NUlvVW9uWUVZYWU2NUtqV3ZZVmtNMzhJTklERndtcUVESHdvZzZkZHRmem1YY21FTnYtVFUxMGl2elFEdWhGNUxfSjBjYWNkbnVBdw?oc=5",
+      "source": "Beef Magazine",
+      "date": "2026-10-29"
+    },
+    {
       "title": "Cattle Futures Fall in Chicago as Cash Trade Weakens and Beef Prices Decline - AgroLatam",
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQODZLTkc2c0R4Z3BSTlVfTTd0T3plRlZVWVdQaHY5MmlPZEpXWmNnMXowQXNfR3ZTNGs4VW5vNHVuMUJsaWNrTGdqaWdUTVBiOHdKQVRFSTRsRW0zU0JkdVBzR21ySk5kY1dPbGtxLXdxWVB1a29BMzdxbVcwU25FbHItX2tnaXN6MTdwZG9aT3ljSW9Xd1ZkQzM0OE11X0thakpOZ24zNWFjbjFySHlXdGRGRl9zRjR4?oc=5",
       "source": "AgroLatam",
-      "date": "2026-10-28"
-    },
-    {
-      "title": "USDA Boxed Beef Cutout Report: Choice and Select Values for October 28, 2026 - News and Statistics - IndexBox",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZWYwR0h2XzZna3dmcmlZeUI0bjlrUFNUeEc0U1lOV1RzeXNlQlpQYkh6dGVWejI2bUJxUm5LbHhHUVlQY3ZVLUh3NDZGX21qNmFVYW0tRUw2bDJaaVU3TDA3bGM2Mk1mRHg4RS1LbnQxQktNZ2MzNjlTVmZncWRkWU14ZlVnZG9jVldvUG9ERkl2OHBudWxGUHk0ZUR2NTJiZm94MzJB?oc=5",
-      "source": "IndexBox",
       "date": "2026-10-28"
     },
     {
@@ -238,46 +250,34 @@
       "date": "2026-10-26"
     },
     {
-      "title": "October 2026 USDA Cattle on Feed highlights - Beef Magazine",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOMy05T1hJal9oaHVla1p0TFE0OXNaRjNGSkdWMTN3UURRc1ZhZXNQUFk3QUxpaXAwd1ozbTNOcVVSUXBnSDBLQnZMTFRQeDltc09NYlRhQjRNaXlycjA5WFROaFZIaW1PWUI2b3AxRl9FdXFWcERsaXJ6Q3FtWFFNWDRYMVliX2hQQ1FwTA?oc=5",
-      "source": "Beef Magazine",
-      "date": "2026-10-23"
-    },
-    {
       "title": "Following President Trump's Executive Orders, USDA Updates its Cash Cattle Market Reports to Advance Transparency - USDA (.gov)",
       "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQRjQwN052d0RDczl6QW5obEYyZm1mampRZ280NGJHMW1QR09zUGtuQ01McGpsODhxbGktX0tpSDZ6bno1b1RJYUtmX19Md01OLWdkLTBBbkQ5M2VSd2lJRWh3UjMzOU1UQXpvYTI1c2dyNmVPN3lWZzlWbHBLTmdscXZNT2Q5U2RjUFFFMWl2VVYwMEoxdE9jR2ktZ2p0b18tajRRaDQ5UHZyMEF4Vjh0WGRSWHJIamdXdUlaZWYxQ0lTUF9ISHdEaERWUFhLQkg1RXZSakVCaUZvYUwtMUdrQTV4MWQ0Q1NESVdwNmJ6WQ?oc=5",
       "source": "USDA (.gov)",
       "date": "2026-10-20"
     },
     {
-      "title": "Cattle Market Standoff: Shrinking Supply Meets Stalled Wholesale Beef Prices - Drovers Magazine",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPZDIyblJGTC1pMVI1aktudC00VXA3eW5SOS1rRUdtZ2lyamJiNl82eVNBOHBMR0stUjdnaG5Tb0tyNWJab2pMNFlOS2ZhUDM0ZGpNVi15cmVWQ09EeXQtVnVxTjc2ak55TV83V1VmX3dKX1ZQeTBBSTRERDF4VEl5Q1hXWVNpV1Y3NVhCMS1SVVhRQi1wc1dVTklaSklUanNhUU5hNDJhUQ?oc=5",
-      "source": "Drovers Magazine",
-      "date": "2026-10-13"
+      "title": "Hurricane Isaias Brings Flooding and Tornado Threats Across the Eastern US - AgroLatam",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOMV9MbFdGTkpaM0hRaVJtTy1aSnNyaGdFOWdVZnpDSWZhU243amJpbUotcnl6R1V3Q3JRRFJUNlhzb1NPQS1DdGxoV082NFFNdEJ1TC1LdDlQUk1YeXBoOTJBbDZTazFtUEZFN1JGZkxjMUJmN3FqSExtMGZ3b2FYZ2VoZG5KcmU4aHF1bDZVZlNzdDJ1?oc=5",
+      "source": "AgroLatam",
+      "date": "2026-10-11"
     },
     {
-      "title": "South Branch Valley Livestock Exchange Special Graded Sale, Moorefield, WV – October 10, 2026 - IndexBox",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPNFk5UXhGSnU1WGE4Mkk4VUJOQklXRmxHajk2cmpKeGNfTzFaTUdDeUQwMHliWllNQUwwRENaeGtrYXp1YXJEa2FFTkRLM3FYSWZTVkJRTEVXNTJpUWNhRzNWNVhyOTZOZDZCWXZiSG1oWW1zQjhHOHBkSm1oRVU0RGFhampscEFHMHhkNTJnaXJMMUVJbUoySU1zRFpmbVUtc19VMEhlMVNuRVV4WnBnYU9ZTjAxb1pmVGc?oc=5",
-      "source": "IndexBox",
-      "date": "2026-10-10"
+      "title": "Mid-Atlantic Farmers Seek Early Fertilizer Price Protection Now - RFD-TV",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPUHZ6ekdlTEJCeW5tVnM3c3h2YUhNQk5fT1NaWnRDanFmNWNXNHowVnNPMjlxSU1mWmp5V1ZueEkwMXBybHZ5VFpqdktYeXlBYU5JM0VVdWFQMTB5M2NNMndaOEU1VGFVN3FGY19wRzA5VE9meE5sYndIejl0YTI3dVB4UFU1bEZ2SHRCekln?oc=5",
+      "source": "RFD-TV",
+      "date": "2026-10-04"
     },
     {
-      "title": "First Thing Today | Grain markets feeling heavy at mid-week - Pro Farmer",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQLXNHdGxrWXBkN24wLVNuRFQwU003bkhubVlsT0ZEOThkTkFRdmJyOGNSTjdTLVppMDVwZENCTFJKUHV3Zl9uU3hxNXpTd01oYkJYUDUzY2dpWTA0SGU5dTkxSnNpaUlXa2xDRGJWcGZzRFhtM05zOGdSOVJ1RzRYXzRNeFc5WTlDZkRGcWFBaEk0bm8zTWRyRjRGU2FPYllFdllMNjZB?oc=5",
+      "title": "First Thing Today | Grains mixed overnight; bulls need a spark - Pro Farmer",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNXzNOelZNTkFjRUNKWl9GazdlTXI4YjNmZUlnLXU1dnZRZC10QTJLRkk0UlhfTEpkWmU0RF83a3YxaEJMU2p4OGVvQ3k3N1Rtc1lpRmFrMzliMndzaGVtUEk2cVJ1dElwTHFScVZyMFc5aVhrMFhPTElFWGpsOXloSl9Vb3lPbE90clZNLVF5MEZDZS12bWYyY0E4bFZHeGZxTnBfaDFEMzU3UQ?oc=5",
       "source": "Pro Farmer",
-      "date": "2026-09-23"
+      "date": "2026-09-18"
     },
     {
-      "title": "First Thing Today | Grain markets pause ahead of jobs report, holiday weekend - Pro Farmer",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNMWxlR2hrZEJoa0p1NjBid2tBSlEwS3loNmJIYkVoSzJQSE94NlU4dzRfSE9HWl84RG93VXNRdDJpUE1taWlWVG9Ec2o0dUYyNGlGdHIzY2szanF2bXpZSDgydVRRU0xzT3hDbDE3RDNfRnVSRzVyZTB3NXN6WTZyYjRaQloxZWFldTZ5eFFxdEJJLW9qLVZ3azBkMDI5THZnVXRrdmhOT2VTRHlwSTJmSFhQRk9VUnZjMGdDUERTdEY1VlMtLTg0Tmt3?oc=5",
-      "source": "Pro Farmer",
-      "date": "2026-09-04"
-    },
-    {
-      "title": "Virginia cattle farmers react to new beef import policy - WDBJ7",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPeVlGVC1ndmVucmlORWJFd3NUU1NaNjE5bE1YbUgzbS1QS0RKZEY4OE9xNUt4eFp1Zm83RWhEMXJ3RjNqNVZ1eWNuNlNuNkNxRExpTzRwaV9NRmFBcWxDUzhhVm54c1ZXTUQ2QXJVZVdiUHVVZ1U2dTYyZExpYUdPa3Q4X3BaUzBUckRfUTFfONIBowFBVV95cUxQMlU4SEFhTW9nVGZKTXUyVHptcGJpajVwWTI0QlFWZHhXZktmVmFQeUFoMmdVVktPV1RxeTVLbXhIc2R2Tzg2NW5ySXgxQkJYMlN4VTVTNENyeU03d2h3c2N0cktqQ19lc2xORExvRThpazJFT21FMjhzYVIxUnRRNzZqRXB3Z0FZeDlZWTVoSlkzTnNtV3Z5bkNzQ1B0ZmViS25B?oc=5",
-      "source": "WDBJ7",
-      "date": "2026-09-01"
+      "title": "Virginia Market News Service weekly ag brief — Sept. 4, 2026 - The Tidewater News",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQdTB5X1hueXVLaDFWNUF6QVV4R0k5Qm9DYnMwX0kzaVZjVlJSNVU4cnczZ1dscUdiNmRWQWFfNUFFcFJQb3BwSUZWdjNfeEJweC1vRFgyb25adXc3WktKeVVTRnBaV2RsZkxkSmdvYkJFTUFDaHNweXhfSklDM043SHZUak4yZnlOQ3N5WjNWdHNNbERySFljSVJReW5FYzAtNTZwamtkRTdJWi1EYWlFeQ?oc=5",
+      "source": "The Tidewater News",
+      "date": "2026-09-08"
     }
   ]
 }
