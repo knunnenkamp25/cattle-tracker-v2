@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03T18:29:57.098Z",
+  "updated": "2026-11-04T18:43:39.225Z",
   "series": [
     {
       "date": "2026-10-05",
@@ -44,14 +44,72 @@
     {
       "date": "2026-11-02",
       "price": 407.25
+    },
+    {
+      "date": "2026-11-04",
+      "price": 423.5
     }
   ],
   "auctions": [
     {
+      "code": "RH_LS149",
+      "name": "Wytheville VA Livestock Auction",
+      "location": "Richmond, VA",
+      "report_date": "2026-11-04",
+      "head": 626,
+      "categories": [
+        {
+          "label": "Steers 400-500 lb",
+          "low": "360",
+          "high": "453"
+        },
+        {
+          "label": "Steers 500-600 lb",
+          "low": "400",
+          "high": "470"
+        },
+        {
+          "label": "Steers 600-700 lb",
+          "low": "323",
+          "high": "380"
+        },
+        {
+          "label": "Heifers 400-500 lb",
+          "low": "345",
+          "high": "415"
+        },
+        {
+          "label": "Heifers 500-600 lb",
+          "low": "295",
+          "high": "345"
+        },
+        {
+          "label": "Heifers 600-700 lb",
+          "low": "300",
+          "high": "310"
+        },
+        {
+          "label": "Bulls 400-500 lb",
+          "low": "385",
+          "high": "395"
+        },
+        {
+          "label": "Bulls 500-600 lb",
+          "low": "345",
+          "high": "395"
+        },
+        {
+          "label": "Bulls 600-700 lb",
+          "low": "265",
+          "high": "280"
+        }
+      ]
+    },
+    {
       "code": "RH_LS151",
       "name": "Staunton VA Livestock Auction",
       "location": "Richmond, VA",
-      "report_date": "2026-11-02",
+      "report_date": "2026-11-04",
       "head": 1243,
       "categories": [
         {
@@ -154,86 +212,20 @@
           "high": "375"
         }
       ]
-    },
-    {
-      "code": "RH_LS149",
-      "name": "Wytheville VA Livestock Auction",
-      "location": "Richmond, VA",
-      "report_date": "2026-10-27",
-      "head": 597,
-      "categories": [
-        {
-          "label": "Steers 400-500 lb",
-          "low": "445",
-          "high": "470"
-        },
-        {
-          "label": "Steers 500-600 lb",
-          "low": "373",
-          "high": "400"
-        },
-        {
-          "label": "Steers 600-700 lb",
-          "low": "338",
-          "high": "350"
-        },
-        {
-          "label": "Heifers 400-500 lb",
-          "low": "380",
-          "high": "410"
-        },
-        {
-          "label": "Heifers 500-600 lb",
-          "low": "330",
-          "high": "380"
-        },
-        {
-          "label": "Heifers 600-700 lb",
-          "low": "295",
-          "high": "330"
-        },
-        {
-          "label": "Bulls 400-500 lb",
-          "low": "380",
-          "high": "455"
-        },
-        {
-          "label": "Bulls 500-600 lb",
-          "low": "340",
-          "high": "385"
-        },
-        {
-          "label": "Bulls 600-700 lb",
-          "low": "307",
-          "high": "318"
-        }
-      ]
     }
   ],
   "news": [
     {
-      "title": "USDA Feeder Cattle Prices Mixed Across Major Markets on November 3, 2026 - News and Statistics - IndexBox",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxObWhxNFdfLWxmWHRiQUJrSFdBdFVyMWRBWFl1NFB3WGNzZ3dESUNGWDl3VU0xdFN3MFBOY3dsd1BmM2hHaXRVYlFTNW54dVFKMFdpS2RseFJrN09vM1h5X0FTdDNnVkFBc185eThoXzdkY1RJZlNQR0FmYU9WWFYzWjlHV2RYd1NLQTdKVmFaYkhBemtnYUNRaHBuVQ?oc=5",
+      "title": "USDA Boxed Beef Cutout Report for November 3, 2026: Choice and Select Daily Changes - News and Statistics - IndexBox",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOMld2dzZ1OE1fTTJQTTRlX1V4bjFYQzNlMGNGSFh5ck1HYkVoeDVTanBOODJ0MG92aU5qZmM1RV9uV0t2SXgwLU84cjc0dUwtWUVsLTlqaGhfUEhvNks1S1RvdDU1OW1YaUV4Sl9EVnlBY1p6T21USWZzdUN2YURQWGNRY05uRjVKREtVaUM3c242ZG5UcFppVWQ3T3pFTlV2alE?oc=5",
       "source": "IndexBox",
       "date": "2026-11-03"
     },
     {
-      "title": "USDA invests nearly $4M to expand Kansas meat processing capacity - Beef Magazine",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQdVJJX2Z2MDhWcVhGYktxSk9IY05XUGF4WVJyaUVodnk5R1FPTXBaakJHSFNQZmZ2TlBkM3Bjd1lnNUkwUy1XT3psR2pUM0dtUU1jYWRkTERwVW5tbU5YWEdaNWZfZzI4c0JMQ2N3VVQ1STJlaHZsSFZfNS0zVXJfUW5ZeVpqS0N5M0tReXA4TkQ1Mk5HNmxYWERhY0R2bWNMcHNGNlNka3A?oc=5",
+      "title": "October 2026 USDA Cattle on Feed highlights - Beef Magazine",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOMy05T1hJal9oaHVla1p0TFE0OXNaRjNGSkdWMTN3UURRc1ZhZXNQUFk3QUxpaXAwd1ozbTNOcVVSUXBnSDBLQnZMTFRQeDltc09NYlRhQjRNaXlycjA5WFROaFZIaW1PWUI2b3AxRl9FdXFWcERsaXJ6Q3FtWFFNWDRYMVliX2hQQ1FwTA?oc=5",
       "source": "Beef Magazine",
-      "date": "2026-11-03"
-    },
-    {
-      "title": "USDA Morning Report Shows Zero Negotiated Boneless Beef, Trimming Sales - News and Statistics - IndexBox",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNLUhJNWxDUzBwcnVPTVlvTFl0YW1fdUZFZ0tfQlRpOUxPRDV1NWFnanlfUGtwSzRNbE5RbjcxQ0w1VnF3NXF3QnVlakMzdVZ0ZWR2dUJrUk1EdURLTHFtRzAxWDI4TlhYVFRBbkFRQkRNTXNvM2dpVTJsQ05xOURGdnYyeUtBZnV4NGhWWW11ZGJaVm1MRFNFNUQ2OA?oc=5",
-      "source": "IndexBox",
-      "date": "2026-11-03"
-    },
-    {
-      "title": "USDA loan backs Panhandle beef plant as cattle supplies stay tight - Plainview Herald",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNeEpkaWhVN3lwNElyeW9nLVNhZWQ0MFFmVkxNek1iSWxRSEdZdm9va1J0eDdGZkd0cjgyU00xeEZFblpvNDEtN2dhQVFRaFZPZnlSOHFaX3gzNnBtUW13bWZteGQ1UHdaNXY1MlhKQlFPM254cklxbTA2NlYzQzduUHkyU0lhbFk?oc=5",
-      "source": "Plainview Herald",
-      "date": "2026-10-30"
+      "date": "2026-10-23"
     },
     {
       "title": "Following President Trump's Executive Orders, USDA Updates its Cash Cattle Market Reports to Advance Transparency - USDA (.gov)",
@@ -282,6 +274,18 @@
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNNmdDUmtMTnFzdnpkS1J4Z1kxdUFPd01OMTN2NnM4NjFDa2lmcFZ1NmNVUzY0TzVncWIzUGxHREF5blB4ZV9FMUVqcGtBNXlzTHdwc3VsOTdJUEhtZ3ExRFQ4N01mMHRFZVYtdXZIcWdKazJiZzRacFpVbTZBV3JtUmZmS3ZaU0Q5bjdBV3NqVzBnblN2N2RSb2sxSGt2YmM?oc=5",
       "source": "Governor of Virginia (.gov)",
       "date": "2026-09-01"
+    },
+    {
+      "title": "Spanberger meets with Virginia cattle ranchers in Botetourt County - WVTF",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQekxPdWZjSGdIQUxQYlVmeGlqSWE3THlEM0U0eTRXalkyYjl4NFZ2ZDlsdFIwZklpTC1yVFhUcHZRXzhSN1BLUUNGSXJacGFWVGRHcmxrcFRCUmZYb29HX1ROZTA2bTE2NmthQmdHclYxY1VXZi1ReGYwX3QxckR0TGFxQ1V4U1V1aXNvOG9mSk5laGw1a09VZGRuVGtCSlczYTRmRTB3?oc=5",
+      "source": "WVTF",
+      "date": "2026-09-01"
+    },
+    {
+      "title": "Virginia cattle farmer braces for more competition, uncertain market as beef tariffs ease - WHSV",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPd0s1Q3hKTE0wbUFWYXZtVjVVRFhzX242dkFxWXRINGRtczdjOHExaEhPNy1COVZGalNxbG1wRzhVYkNscTZYUEVWYXdTQktlOXc3V01XdkJCZHRESWNzUklGQUU0M1NTMFhzLUV3RW9VN1VqVG5WWWpneGp1Mm1PeU5tTDZuZmZGLWRMUjBLYktHd2JJU1ZkUnNURXBzYmlyTmpNZXFhellKeUFaRkhkaE92MWfSAcgBQVVfeXFMTmhWTzBNSGZfREpjV3VzemtXWU1OYTBNdXdQZnNkT25sUEhoUDFiY1pRVU9uMl9iMzdEUkp3b0ZhM0g2VHpHV2RCYjViTXA1QnpFM012NmpNa2FWM1pjb21tcnNlT1dfNlF4VFVwUXJMQm5val9wSHNiR0RYRG9mR2hCWEI0NjRIYmR3bklKUGJkV19IYTRUdlNBTGV6NmphSDJCczBzZDdhZnVtcHpXejZ2amkzOUk3ZEdldEVzNXJBRUZReDlUZVA?oc=5",
+      "source": "WHSV",
+      "date": "2026-08-31"
     }
   ]
 }
