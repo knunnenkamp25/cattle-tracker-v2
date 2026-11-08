@@ -6,7 +6,8 @@ name: Herd alert checks
 #   2. Geofence  — cows whose latest fix is outside the drawn fence.
 #   3. Battery   — collar voltage below the critical threshold
 #                  (settings.low_batt_volts, default 2.9 V).
-# All email an alert and reuse the same secrets as the weekly reminder.
+# All email an alert via Gmail SMTP. SUPABASE_URL and the Gmail host/port
+# are set here (not secret); the Gmail address + app password are secrets.
 on:
   schedule:
     - cron: "17 * * * *"     # hourly (GitHub may delay/skip on free tier)
@@ -16,12 +17,12 @@ jobs:
   check:
     runs-on: ubuntu-latest
     env:
-      SUPABASE_URL:         ${{ secrets.SUPABASE_URL }}
+      SUPABASE_URL:         https://pnileizziwrhwefnzicz.supabase.co
       SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
       REMINDER_TO:          ${{ secrets.REMINDER_TO }}
       REMINDER_FROM:        ${{ secrets.REMINDER_FROM }}
-      SMTP_HOST:            ${{ secrets.SMTP_HOST }}
-      SMTP_PORT:            ${{ secrets.SMTP_PORT }}
+      SMTP_HOST:            smtp.gmail.com
+      SMTP_PORT:            "587"
       SMTP_USER:            ${{ secrets.SMTP_USER }}
       SMTP_PASS:            ${{ secrets.SMTP_PASS }}
     steps:
