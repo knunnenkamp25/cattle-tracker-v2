@@ -21,6 +21,7 @@
   "use strict";
 
   var COLLAR_LABELS = {}; // device_id -> label (loaded from settings)
+  var droneMap = null;    // leaflet map used by the "locate for drone" view
 
   /* ---- hook the Map tab render to add our button ---- */
   const _origRenderMap = window.renderMap;
@@ -189,6 +190,7 @@
         '<label style="display:block;font-size:11px;color:var(--muted,#888);margin-top:8px">On cow</label>' +
         '<select data-dev="' + esc(c.device_id) + '" style="width:100%;padding:7px 8px;' +
         'border:1px solid var(--line,#ccc);border-radius:8px">' + options(owner ? owner.id : "") + '</select>' +
+        (c.recorded_at ? '<button class="btn btn-sm" data-locate="' + esc(c.device_id) + '" style="margin-top:8px">📍 Locate for drone</button>' : '') +
         '</div></div>';
     }).join("");
 
@@ -199,6 +201,117 @@
       inp.addEventListener("change", commit);
       inp.addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); inp.blur(); } });
     });
+    host.querySelectorAll("button[data-locate]").forEach(b =>
+      b.addEventListener("click", () => openDroneLocate(b.dataset.locate)));
+  }
+
+  /* ============================================================
+     Locate for drone — show the cow on a SATELLITE map so you can
+     match the spot on the Potensic app's satellite view and drop a
+     waypoint there. The Potensic app shows no coordinates, so the
+     only way across is matching ground features by eye; the drone's
+     camera closes the last gap once it arrives.
+     ============================================================ */
+  async function fetchFixes(deviceId) {
+    if (!sb || !online()) return [];
+    try {
+      const { data } = await sb.from("locations")
+        .select("lat,lng,recorded_at,battery")
+        .eq("device_id", deviceId)
+        .order("recorded_at", { ascending: false }).limit(12);
+      return (data || []).filter(r => r.lat != null && r.lng != null);
+    } catch (_) { return []; }
+  }
+  function _toR(x) { return x * Math.PI / 180; }
+  function haversine(aLat, aLng, bLat, bLng) {
+    const R = 6371000, dLat = _toR(bLat - aLat), dLng = _toR(bLng - aLng);
+    const s = Math.sin(dLat / 2) ** 2 + Math.cos(_toR(aLat)) * Math.cos(_toR(bLat)) * Math.sin(dLng / 2) ** 2;
+    return 2 * R * Math.asin(Math.sqrt(s));
+  }
+  function bearingDeg(aLat, aLng, bLat, bLng) {
+    const y = Math.sin(_toR(bLng - aLng)) * Math.cos(_toR(bLat));
+    const x = Math.cos(_toR(aLat)) * Math.sin(_toR(bLat)) - Math.sin(_toR(aLat)) * Math.cos(_toR(bLat)) * Math.cos(_toR(bLng - aLng));
+    return (Math.atan2(y, x) * 180 / Math.PI + 360) % 360;
+  }
+  function compass(deg) { return ["N", "NE", "E", "SE", "S", "SW", "W", "NW"][Math.round(deg / 45) % 8]; }
+  function fmtDist(m) { return m >= 1609 ? (m / 1609.34).toFixed(2) + " mi" : Math.round(m) + " m"; }
+  function fixAgo(iso) {
+    if (!iso) return "unknown";
+    const s = (Date.now() - new Date(iso).getTime()) / 1000;
+    if (s < 90) return "just now";
+    if (s < 5400) return Math.round(s / 60) + " min ago";
+    if (s < 172800) return Math.round(s / 3600) + " h ago";
+    return Math.round(s / 86400) + " d ago";
+  }
+  function closeDroneLocate() {
+    if (droneMap) { try { droneMap.remove(); } catch (_) {} droneMap = null; }
+    const m = document.getElementById("drone-modal"); if (m) m.remove();
+  }
+  async function openDroneLocate(deviceId) {
+    closeDroneLocate();
+    const lbl = labelFor(deviceId) || deviceId;
+    const fixes = await fetchFixes(deviceId);
+    const wrap = document.createElement("div");
+    wrap.id = "drone-modal";
+    wrap.className = "modal-overlay";
+    if (!fixes.length) {
+      wrap.innerHTML = '<div class="modal-card" style="max-width:520px">' +
+        '<h2 style="margin:0 0 8px">Locate for drone</h2>' +
+        '<p class="fab-note">' + esc(lbl) + ' has no GPS fix on record yet, so there’s nothing to pin. Once it reports a ' +
+        'location from open sky, this shows it on a satellite map you can match in the Potensic app.</p>' +
+        '<div class="btn-row" style="margin-top:12px"><button class="btn" id="drone-close" style="flex:1">Close</button></div></div>';
+      document.body.appendChild(wrap);
+      wrap.addEventListener("click", e => { if (e.target === wrap) closeDroneLocate(); });
+      document.getElementById("drone-close").addEventListener("click", closeDroneLocate);
+      return;
+    }
+    const latest = fixes[0];
+    const coord = latest.lat.toFixed(6) + ", " + latest.lng.toFixed(6);
+    const mapsUrl = "https://www.google.com/maps/dir/?api=1&destination=" + latest.lat + "," + latest.lng;
+    wrap.innerHTML =
+      '<div class="modal-card" style="max-width:560px">' +
+      '<h2 style="margin:0 0 4px">Locate for drone — ' + esc(lbl) + '</h2>' +
+      '<p class="fab-note" style="margin:0 0 8px">Find this same spot on the Potensic app’s <b>satellite</b> map and drop your waypoint there. ' +
+      'Get within sight before you launch — the drone’s camera finds the cow from the air.</p>' +
+      '<div id="drone-map" style="height:46vh;border-radius:10px;overflow:hidden;background:#111"></div>' +
+      '<div id="drone-info" class="li-sub" style="margin-top:8px;line-height:1.5"></div>' +
+      '<div class="btn-row" style="margin-top:12px">' +
+      '<a class="btn btn-primary" href="' + mapsUrl + '" target="_blank" rel="noopener" style="flex:1;text-align:center;text-decoration:none">Drive here (Maps)</a>' +
+      '<button class="btn" id="drone-close" style="flex:1">Close</button></div>' +
+      '</div>';
+    document.body.appendChild(wrap);
+    wrap.addEventListener("click", e => { if (e.target === wrap) closeDroneLocate(); });
+    document.getElementById("drone-close").addEventListener("click", closeDroneLocate);
+
+    const info = document.getElementById("drone-info");
+    info.innerHTML = "📍 <b>" + esc(coord) + "</b><br>Fix " + fixAgo(latest.recorded_at) +
+      (latest.battery != null && latest.battery !== "" ? " · 🔋 " + esc(String(latest.battery)) : "") +
+      '<span id="drone-youare"></span>';
+
+    if (window.L) {
+      droneMap = L.map("drone-map", { zoomControl: true }).setView([latest.lat, latest.lng], 18);
+      L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+        { maxZoom: 19, attribution: "Imagery © Esri" }).addTo(droneMap);
+      L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}",
+        { maxZoom: 19, opacity: 0.9 }).addTo(droneMap);
+      const pts = fixes.slice().reverse().map(f => [f.lat, f.lng]);
+      if (pts.length > 1) L.polyline(pts, { color: "#ffd400", weight: 2, opacity: 0.85, dashArray: "4,4" }).addTo(droneMap);
+      L.circleMarker([latest.lat, latest.lng], { radius: 8, color: "#fff", weight: 2, fillColor: "#d9342b", fillOpacity: 1 })
+        .addTo(droneMap).bindPopup("<b>" + esc(lbl) + "</b><br>" + esc(coord));
+      setTimeout(() => droneMap && droneMap.invalidateSize(), 150);
+    } else {
+      document.getElementById("drone-map").innerHTML =
+        '<div class="fab-note" style="padding:12px">Map didn’t load — the coordinates above and the Maps button still work.</div>';
+    }
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(pos => {
+        const d = haversine(pos.coords.latitude, pos.coords.longitude, latest.lat, latest.lng);
+        const b = bearingDeg(pos.coords.latitude, pos.coords.longitude, latest.lat, latest.lng);
+        const el = document.getElementById("drone-youare");
+        if (el) el.innerHTML = "<br>➡️ " + fmtDist(d) + " " + compass(b) + " of you";
+      }, () => {}, { enableHighAccuracy: true, timeout: 8000, maximumAge: 30000 });
+    }
   }
 
   /* ---- the actual reassignment (uses app.js's offline-safe saveUpdate) ---- */
