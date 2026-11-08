@@ -335,6 +335,46 @@
     }
   }
 
+  /* ============================================================
+     Wire "locate for drone" into the Map tab's alert banners.
+     We override app.js's loadDownAlerts / loadFenceAlerts with
+     the same render plus a per-row "locate for drone" link. Each
+     alert row carries its collar's device_id, so an emergency can
+     jump straight to the satellite locator.
+     ============================================================ */
+  function makeAlertLoader(type, bannerId, title, defDetail) {
+    return async function () {
+      const el = document.getElementById(bannerId);
+      if (!el || !sb) return;
+      try {
+        const { data } = await sb.from("alerts").select("*")
+          .eq("type", type).eq("status", "open").order("opened_at", { ascending: false });
+        const rows = data || [];
+        if (!rows.length) { el.style.display = "none"; el.innerHTML = ""; return; }
+        const item = (r) => {
+          const a = ANIMALS.find(x => x.id === r.animal_id);
+          const dev = r.device_id || (a && a.device_id) || "";
+          const nm = a ? (a.tag_number ? ("Tag " + a.tag_number) : (a.name || "Animal")) : ("Device " + (r.device_id || ""));
+          const view = a ? ' <a href="#" data-open="' + a.id + '" class="alert-open" style="color:#7a1c14;text-decoration:underline">view</a>' : "";
+          const loc = dev ? ' <a href="#" data-locate="' + esc(dev) + '" class="alert-locate" style="color:#7a1c14;text-decoration:underline">📍 locate for drone</a>' : "";
+          return '<li>' + esc(nm) + ' — ' + esc(r.detail || defDetail) + view + loc + '</li>';
+        };
+        el.style.display = "block";
+        el.innerHTML = '<b>' + title + ' (' + rows.length + '):</b>' +
+          '<ul style="margin:4px 0 0;padding-left:18px">' + rows.map(item).join("") + '</ul>';
+        el.querySelectorAll(".alert-open").forEach(x => x.addEventListener("click", ev => {
+          ev.preventDefault(); if (typeof window.openProfile === "function") window.openProfile(x.dataset.open);
+        }));
+        el.querySelectorAll(".alert-locate").forEach(x => x.addEventListener("click", ev => {
+          ev.preventDefault(); openDroneLocate(x.dataset.locate);
+        }));
+      } catch (e) { el.style.display = "none"; }
+    };
+  }
+  window.loadDownAlerts = makeAlertLoader("down_cow", "down-banner", "⚠ Possibly down", "no movement");
+  window.loadFenceAlerts = makeAlertLoader("geofence_escape", "fence-banner", "⚠ Outside the fence", "outside the fence");
+
   // expose for console/debugging
   window.openCollarsManager = openCollarsManager;
+  window.openDroneLocate = openDroneLocate;
 })();
