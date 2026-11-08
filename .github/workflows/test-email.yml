@@ -1,0 +1,24 @@
+name: Test alert email
+
+# Manual-only. Click "Run workflow" to send yourself one test email using
+# the same Gmail SMTP secrets as the real alerts, to confirm the setup works.
+on:
+  workflow_dispatch:
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    env:
+      REMINDER_TO:   ${{ secrets.REMINDER_TO }}
+      REMINDER_FROM: ${{ secrets.REMINDER_FROM }}
+      SMTP_HOST:     smtp.gmail.com
+      SMTP_PORT:     "587"
+      SMTP_USER:     ${{ secrets.SMTP_USER }}
+      SMTP_PASS:     ${{ secrets.SMTP_PASS }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install nodemailer
+      - run: node scripts/test-alert-email.js
