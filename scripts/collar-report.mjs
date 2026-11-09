@@ -26,16 +26,18 @@ function haversine(a, b) {
   return 2 * R * Math.asin(Math.sqrt(s));
 }
 
-async function fetchRows(dev) {
-  const since = new Date(Date.now() - WINDOW_DAYS * 864e5).toISOString();
-  const u = new URL(BASE + "/rest/v1/locations");
-  u.searchParams.set("select", "recorded_at,battery,lat,lng");
-  u.searchParams.set("device_id", "eq." + dev);
-  u.searchParams.set("recorded_at", "gte." + since);
-  u.searchParams.set("order", "recorded_at.asc");
-  u.searchParams.set("limit", "5000");
+// A scoped, security-definer function returns the 3 test collars' recent rows
+// (ordered oldest-first) to the public key; the raw table stays login-only.
+async function fetchAll() {
+  const u = new URL(BASE + "/rest/v1/rpc/collar_report");
   const r = await fetch(u, {
-    headers: { apikey: KEY, Authorization: "Bearer " + KEY },
+    method: "POST",
+    headers: {
+      apikey: KEY,
+      Authorization: "Bearer " + KEY,
+      "Content-Type": "application/json",
+    },
+    body: "{}",
   });
   if (!r.ok) throw new Error("HTTP " + r.status + " " + (await r.text()).slice(0, 200));
   return r.json();
@@ -82,12 +84,20 @@ function summarize(rows) {
 }
 
 const out = { generated_at: new Date().toISOString(), window_days: WINDOW_DAYS, collars: {} };
+let all = null;
+let fetchError = null;
+try {
+  all = await fetchAll();
+} catch (e) {
+  fetchError = String((e && e.message) || e);
+}
+const byDev = {};
+if (all) for (const row of all) (byDev[row.device_id] ||= []).push(row);
 for (const [label, dev] of Object.entries(COLLARS)) {
-  try {
-    const rows = await fetchRows(dev);
-    out.collars[label] = { device_id: dev, ...summarize(rows) };
-  } catch (e) {
-    out.collars[label] = { device_id: dev, error: String((e && e.message) || e) };
+  if (fetchError) {
+    out.collars[label] = { device_id: dev, error: fetchError };
+  } else {
+    out.collars[label] = { device_id: dev, ...summarize(byDev[dev] || []) };
   }
 }
 mkdirSync("telemetry", { recursive: true });
