@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-11-09T02:46:15.779Z",
+  "window_days": 7,
+  "collars": {
+    "2-cell": {
+      "device_id": "dev:868531060199697",
+      "error": "Failed to parse URL from https://pnileizziwrhwefnzicz.supabase.co/rest/v1/locations?select=recorded_at,battery,lat,lng&device_id=eq.dev%3A868531060199697&recorded_at=gte.2026-11-02T02:46:15.784Z&order=recorded_at.asc&limit=5000"
+    },
+    "3-cell": {
+      "device_id": "dev:868531063312784",
+      "error": "Failed to parse URL from https://pnileizziwrhwefnzicz.supabase.co/rest/v1/locations?select=recorded_at,battery,lat,lng&device_id=eq.dev%3A868531063312784&recorded_at=gte.2026-11-02T02:46:15.856Z&order=recorded_at.asc&limit=5000"
+    },
+    "4-cell": {
+      "device_id": "dev:868531063304930",
+      "error": "Failed to parse URL from https://pnileizziwrhwefnzicz.supabase.co/rest/v1/locations?select=recorded_at,battery,lat,lng&device_id=eq.dev%3A868531063304930&recorded_at=gte.2026-11-02T02:46:15.857Z&order=recorded_at.asc&limit=5000"
+    }
+  }
+}
