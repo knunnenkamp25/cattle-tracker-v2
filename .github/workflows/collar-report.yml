@@ -1,17 +1,21 @@
 name: Collar telemetry report
 
-# Fetches each collar's recent telemetry from Supabase (public anon key) and
-# commits a compact JSON summary to telemetry/collar-report.json. A separate
-# scheduled job reads that file and emails the owner — this workflow only
-# gathers the data (GitHub's runners can reach Supabase; the owner's other
-# automation cannot).
+# Fetches each collar's recent telemetry from Supabase (public key, via a
+# scoped read-only function) and publishes a compact JSON summary to the
+# dedicated `telemetry` branch (force-pushed, so it can never conflict with
+# main or with a previous run). A scheduled job reads that file and emails
+# the owner — this workflow only gathers the data.
 on:
   schedule:
     - cron: "27 11 */3 * *"   # every ~3 days, 11:27 UTC (best-effort on free tier)
-  workflow_dispatch:            # allow manual/triggered runs
+  workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: collar-telemetry
+  cancel-in-progress: false
 
 jobs:
   gather:
@@ -28,10 +32,14 @@ jobs:
           SB_KEY: sb_publishable_cxrTsmvBy7_utuMeosQNfQ_ws_iAk0B
         run: node scripts/collar-report.mjs
 
-      - name: Commit the summary
+      - name: Publish to the telemetry branch
         run: |
           git config user.name "collar-telemetry-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add telemetry/collar-report.json
-          git commit -m "collar telemetry $(date -u +%Y-%m-%dT%H:%M:%SZ)" || { echo "no changes"; exit 0; }
-          git push
+          cp telemetry/collar-report.json "$RUNNER_TEMP/collar-report.json"
+          git checkout --orphan telemetry
+          git rm -rf . >/dev/null 2>&1 || true
+          cp "$RUNNER_TEMP/collar-report.json" ./collar-report.json
+          git add collar-report.json
+          git commit -m "collar telemetry $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push -f origin telemetry
