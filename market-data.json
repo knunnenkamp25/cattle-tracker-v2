@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10T18:43:19.449Z",
+  "updated": "2026-11-11T18:46:54.541Z",
   "series": [
     {
       "date": "2026-10-05",
@@ -220,10 +220,16 @@
   ],
   "news": [
     {
-      "title": "USDA Weekly Beef Market Data: Boxed Beef Cutout, Cattle Summary, Tallow and Hide Prices - News and Statistics - IndexBox",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOcEFtV2psX3ZJb3EzNGpEOFFOdVF0N0FWbm1qeElGak90dFpEQVRwVVE4aVJFTHlIdEJWdVlEcHNUVmNrbUVBMW9YZFM4eW5takdHYkJoZzk0eGZjbTBucTY1bWVEYjJMMTkyXzNuSzdFX1BpM2hhUndncjItbEh1VzdmUzhzMkV0S3MwcjBQY1RwZlZia2R1SHpn?oc=5",
+      "title": "Cattle Report - High Plains Journal",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBybGV1VDlYUmI1aEpoOUVrOEhUckVRejlObWp4cHNxaXMyM2lfU0lVWXAtRk5BOFZzSDIxdmNRQlBoQlJXOEp4OFZQY19wazZSc3M1SHhscFdOc2lmWFQtTkFmMzNmOHB1?oc=5",
+      "source": "High Plains Journal",
+      "date": "2026-11-11"
+    },
+    {
+      "title": "USDA Morning Report Shows Formula Cattle Purchases Up From Year-Ago Levels - News and Statistics - IndexBox",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxONTFXb2t3al9fUEY2MWoxNUVZYWViazQtNVFSNENoVWxmRW1tTHhPWE0tdWliUzFVYVBKcWlGbjNodnFLOHROZ3RTRU51QkktTlVBZG9jaHktaF9FeGs4TVBPR1lyZXJUdmU0TnV2dm84Q1RZMXNKVTAwYzFkQ0FodjNmdUZkOWhJVWZrR0d4MW8xVGhWbzNBNXpqVWZfNHc?oc=5",
       "source": "IndexBox",
-      "date": "2026-11-09"
+      "date": "2026-11-11"
     },
     {
       "title": "Op-Ed: Cattle Market Turmoil Threatens America’s Independent Producers - Morning Ag Clips",
@@ -236,18 +242,6 @@
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQMjVFTGxOeTg4d2N6ZTRENjRDVnRHZ01iYkFOOW1FV3VFeHY2NkJFY0tZLTNqdGY1cWJaQVV0c05QZWh5MlJKbFU3WllaZF9fOHdmRDZCNlV3alRMY3NqRHYyYU5oYmctYmlVc0lfTXI5b1N0dVNVM1hLSmh5RmVJdURaQzctRmYyVDdKWGtzb0k3dw?oc=5",
       "source": "chadronradio.com",
       "date": "2026-11-06"
-    },
-    {
-      "title": "USDA cattle market report - High Plains Journal",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5jN3JXY3R4SE1YZlVwSkNnaC03MkptNUx6MVloZ1Q0NTNlVDBtUkxnMnpiSF9QeklfRlpVaXhZd0VVdFdWem51ZUp4aTZmWXU2bEozN3RONDIwYWtNVGNYLXlLUQ?oc=5",
-      "source": "High Plains Journal",
-      "date": "2026-11-05"
-    },
-    {
-      "title": "Beef Demand Growth Reshapes Fed Cattle Market Reporting - RFD-TV",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQZ01LQVNsZDhhOEl6Tlh3ODhkX3I2Y2VtRHF6T2tvczFGczlQRVlWVkk2RkNXbFdmZmhkNTFPTTE5S2hGUkFWbUVicGdKd1hYY0lnd1VyUWJjSUVpZk5uVE5QeDNSNHVad3pUU1hicVBESnl6MmtnekFPRFpCNG90SlpuVQ?oc=5",
-      "source": "RFD-TV",
-      "date": "2026-11-05"
     },
     {
       "title": "October 2026 USDA Cattle on Feed highlights - Beef Magazine",
@@ -274,6 +268,18 @@
       "date": "2026-10-19"
     },
     {
+      "title": "Unpriced Contracts: How Packers Weaken the Cash Cattle Market - Morning Ag Clips",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOTWxBTGpHTk1CTHgzMEFRNHR4ZkR3SXZHMnIzeW9tTGlvdzZxczVjQnFBN2xIbEl3YUlCek8zWDhSU29HTUphVk9nZXViUXFERVVncnlOeFZfS0tHdmhHbE1neWMtNFEwal90NjBoTks4aUtNZWhtMkRqU2hjdW5YSmRKby1QR01PMFJtVWo5SV82Si1sb05z?oc=5",
+      "source": "Morning Ag Clips",
+      "date": "2026-10-14"
+    },
+    {
+      "title": "Mid-Atlantic Farmers Seek Early Fertilizer Price Protection Now - RFD-TV",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPUHZ6ekdlTEJCeW5tVnM3c3h2YUhNQk5fT1NaWnRDanFmNWNXNHowVnNPMjlxSU1mWmp5V1ZueEkwMXBybHZ5VFpqdktYeXlBYU5JM0VVdWFQMTB5M2NNMndaOEU1VGFVN3FGY19wRzA5VE9meE5sYndIejl0YTI3dVB4UFU1bEZ2SHRCekln?oc=5",
+      "source": "RFD-TV",
+      "date": "2026-10-04"
+    },
+    {
       "title": "First Thing Today | Grain markets feeling heavy at mid-week - Pro Farmer",
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQLXNHdGxrWXBkN24wLVNuRFQwU003bkhubVlsT0ZEOThkTkFRdmJyOGNSTjdTLVppMDVwZENCTFJKUHV3Zl9uU3hxNXpTd01oYkJYUDUzY2dpWTA0SGU5dTkxSnNpaUlXa2xDRGJWcGZzRFhtM05zOGdSOVJ1RzRYXzRNeFc5WTlDZkRGcWFBaEk0bm8zTWRyRjRGU2FPYllFdllMNjZB?oc=5",
       "source": "Pro Farmer",
@@ -284,12 +290,6 @@
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQdTB5X1hueXVLaDFWNUF6QVV4R0k5Qm9DYnMwX0kzaVZjVlJSNVU4cnczZ1dscUdiNmRWQWFfNUFFcFJQb3BwSUZWdjNfeEJweC1vRFgyb25adXc3WktKeVVTRnBaV2RsZkxkSmdvYkJFTUFDaHNweXhfSklDM043SHZUak4yZnlOQ3N5WjNWdHNNbERySFljSVJReW5FYzAtNTZwamtkRTdJWi1EYWlFeQ?oc=5",
       "source": "The Tidewater News",
       "date": "2026-09-08"
-    },
-    {
-      "title": "First Thing Today | Grain markets pause ahead of jobs report, holiday weekend - Pro Farmer",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNMWxlR2hrZEJoa0p1NjBid2tBSlEwS3loNmJIYkVoSzJQSE94NlU4dzRfSE9HWl84RG93VXNRdDJpUE1taWlWVG9Ec2o0dUYyNGlGdHIzY2szanF2bXpZSDgydVRRU0xzT3hDbDE3RDNfRnVSRzVyZTB3NXN6WTZyYjRaQloxZWFldTZ5eFFxdEJJLW9qLVZ3azBkMDI5THZnVXRrdmhOT2VTRHlwSTJmSFhQRk9VUnZjMGdDUERTdEY1VlMtLTg0Tmt3?oc=5",
-      "source": "Pro Farmer",
-      "date": "2026-09-04"
     }
   ]
 }
