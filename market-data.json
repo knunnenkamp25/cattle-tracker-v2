@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-14T17:13:28.781Z",
+  "updated": "2026-11-15T17:53:04.165Z",
   "series": [
     {
       "date": "2026-10-05",
@@ -224,10 +224,22 @@
   ],
   "news": [
     {
+      "title": "Give gift of recognition: Nominate a Mid-Atlantic Master Farmer - Farm Progress",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPQng3TGFCeTVRQVVaeGoybzJuRWJBVWFVWXh2UW9uYjhIS1JXNjBPMTZLdEdLNHhKc2FoVWozOXAxYnJ3dW0zSFlsSGM5RHU3VWw1cnRZRVgtTHR0V1d2NFE5dC1PbE5vWkRhZ3pXMXJ6RHJuUTVjVE94QnZOSjFOUUdyZmtldXd0cjA5a2FKMk5kaTNZMEN0dXd1T2ZPYnc?oc=5",
+      "source": "Farm Progress",
+      "date": "2026-11-13"
+    },
+    {
       "title": "USDA Beef Market Report: Boxed Beef Cutout, Slaughter, Tallow &amp; Hide Data - News and Statistics - IndexBox",
       "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNWXhTWVBSS2tNdmVhQ245SC1SaHpldnljSnZra1BKZEotSEt5bFJqWUwwS3prMHpQU1I3c3h1eFNOenBPX1BEcXAxdlh3U2czWmVTM1VCNWZ5Y3RRbE5VWW9EbS1uSXhBa2FlUFhoYnBLTGZhM25XSzlkbTNqd3IwekxnWFFwc2ZVVXlKaUtSdEtMQjVhNk00?oc=5",
       "source": "IndexBox",
       "date": "2026-11-13"
+    },
+    {
+      "title": "USDA cattle market report - High Plains Journal",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5jN3JXY3R4SE1YZlVwSkNnaC03MkptNUx6MVloZ1Q0NTNlVDBtUkxnMnpiSF9QeklfRlpVaXhZd0VVdFdWem51ZUp4aTZmWXU2bEozN3RONDIwYWtNVGNYLXlLUQ?oc=5",
+      "source": "High Plains Journal",
+      "date": "2026-11-05"
     },
     {
       "title": "USDA Updates Cash Cattle Market Reports - DTN Progressive Farmer",
@@ -266,15 +278,9 @@
       "date": "2026-09-23"
     },
     {
-      "title": "Virginia Market News Service weekly ag brief — Sept. 4, 2026 - The Tidewater News",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQdTB5X1hueXVLaDFWNUF6QVV4R0k5Qm9DYnMwX0kzaVZjVlJSNVU4cnczZ1dscUdiNmRWQWFfNUFFcFJQb3BwSUZWdjNfeEJweC1vRFgyb25adXc3WktKeVVTRnBaV2RsZkxkSmdvYkJFTUFDaHNweXhfSklDM043SHZUak4yZnlOQ3N5WjNWdHNNbERySFljSVJReW5FYzAtNTZwamtkRTdJWi1EYWlFeQ?oc=5",
-      "source": "The Tidewater News",
-      "date": "2026-09-08"
-    },
-    {
-      "title": "First Thing Today | Grain markets pause ahead of jobs report, holiday weekend - Pro Farmer",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNMWxlR2hrZEJoa0p1NjBid2tBSlEwS3loNmJIYkVoSzJQSE94NlU4dzRfSE9HWl84RG93VXNRdDJpUE1taWlWVG9Ec2o0dUYyNGlGdHIzY2szanF2bXpZSDgydVRRU0xzT3hDbDE3RDNfRnVSRzVyZTB3NXN6WTZyYjRaQloxZWFldTZ5eFFxdEJJLW9qLVZ3azBkMDI5THZnVXRrdmhOT2VTRHlwSTJmSFhQRk9VUnZjMGdDUERTdEY1VlMtLTg0Tmt3?oc=5",
-      "source": "Pro Farmer",
+      "title": "Trump’s tariff moves threaten America’s struggling beef industry, rancher says - The Virginia Independent",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPZ0dXZ3A1Z0hjaFpMTUFqUE9vazVaLTNDUU54TVptQ1BpbGljOTNuZGVFVDY1ZVFYYUFHWDE4RklTZHlqZFcxNVoyRDZfc0toTldfaVM5dS1EaE4wYzRZbE0tRmo4aVFqQ1N3bEVLcE95Q1NwOS0tOVllS2ZHTTJLbnBJejJTWjZnRk5MY044djBrQXYtQ0FxcklCVnRCbDZEcGdQWlJWb2RqdU11UnZHUHBTYWxVUGRkOUl6NQ?oc=5",
+      "source": "The Virginia Independent",
       "date": "2026-09-04"
     },
     {
@@ -287,12 +293,6 @@
       "title": "Virginia cattle farmers react to new beef import policy - WDBJ7",
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPeVlGVC1ndmVucmlORWJFd3NUU1NaNjE5bE1YbUgzbS1QS0RKZEY4OE9xNUt4eFp1Zm83RWhEMXJ3RjNqNVZ1eWNuNlNuNkNxRExpTzRwaV9NRmFBcWxDUzhhVm54c1ZXTUQ2QXJVZVdiUHVVZ1U2dTYyZExpYUdPa3Q4X3BaUzBUckRfUTFfONIBowFBVV95cUxQMlU4SEFhTW9nVGZKTXUyVHptcGJpajVwWTI0QlFWZHhXZktmVmFQeUFoMmdVVktPV1RxeTVLbXhIc2R2Tzg2NW5ySXgxQkJYMlN4VTVTNENyeU03d2h3c2N0cktqQ19lc2xORExvRThpazJFT21FMjhzYVIxUnRRNzZqRXB3Z0FZeDlZWTVoSlkzTnNtV3Z5bkNzQ1B0ZmViS25B?oc=5",
       "source": "WDBJ7",
-      "date": "2026-09-01"
-    },
-    {
-      "title": "Spanberger meets with Virginia cattle ranchers in Botetourt County - WVTF",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQekxPdWZjSGdIQUxQYlVmeGlqSWE3THlEM0U0eTRXalkyYjl4NFZ2ZDlsdFIwZklpTC1yVFhUcHZRXzhSN1BLUUNGSXJacGFWVGRHcmxrcFRCUmZYb29HX1ROZTA2bTE2NmthQmdHclYxY1VXZi1ReGYwX3QxckR0TGFxQ1V4U1V1aXNvOG9mSk5laGw1a09VZGRuVGtCSlczYTRmRTB3?oc=5",
-      "source": "WVTF",
       "date": "2026-09-01"
     }
   ]
