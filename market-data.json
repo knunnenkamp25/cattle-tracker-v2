@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16T21:07:33.735Z",
+  "updated": "2026-11-17T19:56:42.365Z",
   "series": [
     {
       "date": "2026-10-05",
@@ -60,9 +60,67 @@
     {
       "date": "2026-11-16",
       "price": 386.5
+    },
+    {
+      "date": "2026-11-17",
+      "price": 366.5
     }
   ],
   "auctions": [
+    {
+      "code": "RH_LS149",
+      "name": "Wytheville VA Livestock Auction",
+      "location": "Richmond, VA",
+      "report_date": "2026-11-17",
+      "head": 1207,
+      "categories": [
+        {
+          "label": "Steers 400-500 lb",
+          "low": "375",
+          "high": "443"
+        },
+        {
+          "label": "Steers 500-600 lb",
+          "low": "323",
+          "high": "380"
+        },
+        {
+          "label": "Steers 600-700 lb",
+          "low": "292",
+          "high": "343"
+        },
+        {
+          "label": "Heifers 400-500 lb",
+          "low": "342",
+          "high": "387"
+        },
+        {
+          "label": "Heifers 500-600 lb",
+          "low": "300",
+          "high": "343"
+        },
+        {
+          "label": "Heifers 600-700 lb",
+          "low": "260",
+          "high": "325"
+        },
+        {
+          "label": "Bulls 400-500 lb",
+          "low": "378",
+          "high": "378"
+        },
+        {
+          "label": "Bulls 500-600 lb",
+          "low": "328",
+          "high": "375"
+        },
+        {
+          "label": "Bulls 600-700 lb",
+          "low": "300",
+          "high": "307"
+        }
+      ]
+    },
     {
       "code": "RH_LS151",
       "name": "Staunton VA Livestock Auction",
@@ -170,74 +228,20 @@
           "high": "325"
         }
       ]
-    },
-    {
-      "code": "RH_LS149",
-      "name": "Wytheville VA Livestock Auction",
-      "location": "Richmond, VA",
-      "report_date": "2026-11-12",
-      "head": 485,
-      "categories": [
-        {
-          "label": "Steers 400-500 lb",
-          "low": "362",
-          "high": "460"
-        },
-        {
-          "label": "Steers 500-600 lb",
-          "low": "360",
-          "high": "463"
-        },
-        {
-          "label": "Steers 600-700 lb",
-          "low": "335",
-          "high": "335"
-        },
-        {
-          "label": "Heifers 400-500 lb",
-          "low": "330",
-          "high": "385"
-        },
-        {
-          "label": "Heifers 500-600 lb",
-          "low": "330",
-          "high": "360"
-        },
-        {
-          "label": "Heifers 600-700 lb",
-          "low": "300",
-          "high": "305"
-        },
-        {
-          "label": "Bulls 400-500 lb",
-          "low": "315",
-          "high": "373"
-        },
-        {
-          "label": "Bulls 500-600 lb",
-          "low": "288",
-          "high": "308"
-        },
-        {
-          "label": "Bulls 600-700 lb",
-          "low": "288",
-          "high": "307"
-        }
-      ]
     }
   ],
   "news": [
     {
-      "title": "USDA Feeder &amp; Stocker Cattle Auction Summary - November 16, 2026 - News and Statistics - IndexBox",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOeXVMV1FRM0hibW0zRFZLT2dpaHFKMkVyeE1KeDJkNlcyQ0Nmd1RJMHFkOVY0dzlDdTFXR08zYmRyczJpSmJwUjN1WXFzSTdneGktSlA2c3oyeHhwLWMxanlDbm01SWo0WmdqVHBHRThDX21TUzRxUkNQWnpzbmN5YzRBZUdNbVNfSWpwWWZhMEY3VEh2Vy1ndTlFU05IZw?oc=5",
+      "title": "USDA Feeder Cattle Summary: Mixed Auction Prices, Lower Futures on November 17, 2026 - News and Statistics - IndexBox",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNUW9jR0Nrdy1aOC1pb0RaeVlqTVdiUjRnQXgtakhWdjVFREdqek5xRk5JQnhmSTVyRzN2d3VrYTc2RGRpWUxQZi1sVkF3VmItOXBxS3hBVzhVSVo3TEYtNGlhZW1DSXd0SjFHUFh3YkI5RktLN29fQmNtbjBWM3hEdDdKWE5uUHBpUXBQWTc0M0xCSjIzekJaM0ZCbkp5SEswQlJ1VW5FTXJSZlZSMXJ0T3d3dWpvYXN1RXNUQ2pn?oc=5",
       "source": "IndexBox",
-      "date": "2026-11-16"
+      "date": "2026-11-17"
     },
     {
-      "title": "USDA Prime Boxed Beef Sales: 77.72 Loads for Week of Nov 16, 2026 - News and Statistics - IndexBox",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQRUJjaldxeWYzNGUwcS1HYTdFNlpOS01UX2xod296S0RtWGZhVGh1NXFNc1YtRmpOZzljWmk0ZXU3MlJIUFVtTWk1NnRCekY5NW1CVVNIUllvUENTUHhyalB2bmZMVHhUYWZzclMwZ2IteUZEVFBGWk9ibEJrSlNMV2RfVTFnUHJOVHRXZzA1ZU5jRVh4b0VndHROekRNRldN?oc=5",
+      "title": "USDA LM_CT109: Formula Net, Negotiated Grid Cattle Volumes and Prices for Nov 17, 2026 - News and Statistics - IndexBox",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNWGtfbmhnTHdSX2dBeEdzZlFSRDRFcVZEZ18yWGtITUVPZHdTR19iV0QzZllwX3VKUE9nd3lZRlpCQVhKdk5MbHE1TnhXNTV1dmVBRGozN1NhWUIxYXlBT09kcjFaSVdkRmRnSmkwQnMtWnIxbktHZXdUYlItV3NJR0hkbFpqX1Vtc21kMy1tY2hGQjJ3Z2xoZzh4VGMycjJJ?oc=5",
       "source": "IndexBox",
-      "date": "2026-11-16"
+      "date": "2026-11-17"
     },
     {
       "title": "Give gift of recognition: Nominate a Mid-Atlantic Master Farmer - Farm Progress",
@@ -282,12 +286,6 @@
       "date": "2026-09-23"
     },
     {
-      "title": "Trump’s tariff moves threaten America’s struggling beef industry, rancher says - The Virginia Independent",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPZ0dXZ3A1Z0hjaFpMTUFqUE9vazVaLTNDUU54TVptQ1BpbGljOTNuZGVFVDY1ZVFYYUFHWDE4RklTZHlqZFcxNVoyRDZfc0toTldfaVM5dS1EaE4wYzRZbE0tRmo4aVFqQ1N3bEVLcE95Q1NwOS0tOVllS2ZHTTJLbnBJejJTWjZnRk5MY044djBrQXYtQ0FxcklCVnRCbDZEcGdQWlJWb2RqdU11UnZHUHBTYWxVUGRkOUl6NQ?oc=5",
-      "source": "The Virginia Independent",
-      "date": "2026-09-04"
-    },
-    {
       "title": "First Thing Today | Grain markets pause ahead of jobs report, holiday weekend - Pro Farmer",
       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNMWxlR2hrZEJoa0p1NjBid2tBSlEwS3loNmJIYkVoSzJQSE94NlU4dzRfSE9HWl84RG93VXNRdDJpUE1taWlWVG9Ec2o0dUYyNGlGdHIzY2szanF2bXpZSDgydVRRU0xzT3hDbDE3RDNfRnVSRzVyZTB3NXN6WTZyYjRaQloxZWFldTZ5eFFxdEJJLW9qLVZ3azBkMDI5THZnVXRrdmhOT2VTRHlwSTJmSFhQRk9VUnZjMGdDUERTdEY1VlMtLTg0Tmt3?oc=5",
       "source": "Pro Farmer",
@@ -297,6 +295,12 @@
       "title": "Governor Spanberger Stands Alongside Cattlemen Facing Rising Input Costs, Consequences of Trump Administration Plan to Undercut Virginia Beef - Governor of Virginia (.gov)",
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNNmdDUmtMTnFzdnpkS1J4Z1kxdUFPd01OMTN2NnM4NjFDa2lmcFZ1NmNVUzY0TzVncWIzUGxHREF5blB4ZV9FMUVqcGtBNXlzTHdwc3VsOTdJUEhtZ3ExRFQ4N01mMHRFZVYtdXZIcWdKazJiZzRacFpVbTZBV3JtUmZmS3ZaU0Q5bjdBV3NqVzBnblN2N2RSb2sxSGt2YmM?oc=5",
       "source": "Governor of Virginia (.gov)",
+      "date": "2026-09-01"
+    },
+    {
+      "title": "Virginia cattle farmers react to new beef import policy - WDBJ7",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPeVlGVC1ndmVucmlORWJFd3NUU1NaNjE5bE1YbUgzbS1QS0RKZEY4OE9xNUt4eFp1Zm83RWhEMXJ3RjNqNVZ1eWNuNlNuNkNxRExpTzRwaV9NRmFBcWxDUzhhVm54c1ZXTUQ2QXJVZVdiUHVVZ1U2dTYyZExpYUdPa3Q4X3BaUzBUckRfUTFfONIBowFBVV95cUxQMlU4SEFhTW9nVGZKTXUyVHptcGJpajVwWTI0QlFWZHhXZktmVmFQeUFoMmdVVktPV1RxeTVLbXhIc2R2Tzg2NW5ySXgxQkJYMlN4VTVTNENyeU03d2h3c2N0cktqQ19lc2xORExvRThpazJFT21FMjhzYVIxUnRRNzZqRXB3Z0FZeDlZWTVoSlkzTnNtV3Z5bkNzQ1B0ZmViS25B?oc=5",
+      "source": "WDBJ7",
       "date": "2026-09-01"
     }
   ]
