@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T21:23:19.089Z",
+  "updated": "2026-11-25T20:31:41.741Z",
   "series": [
     {
       "date": "2026-10-05",
@@ -72,6 +72,10 @@
     {
       "date": "2026-11-23",
       "price": 378.33
+    },
+    {
+      "date": "2026-11-25",
+      "price": 378.33
     }
   ],
   "auctions": [
@@ -79,7 +83,7 @@
       "code": "RH_LS151",
       "name": "Staunton VA Livestock Auction",
       "location": "Richmond, VA",
-      "report_date": "2026-11-23",
+      "report_date": "2026-11-25",
       "head": 778,
       "categories": [
         {
@@ -240,16 +244,28 @@
   ],
   "news": [
     {
+      "title": "Cattle Futures End Mixed in Chicago as U.S. Feedlot Supplies Tighten - AgroLatam",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOUEczdE92VXRWWlFrUkdVX2lkdUs5STY5di1nTVQ2cVpUZlBjZTlNeGlETUh4aWNGUmpyTjJqUU1YSEZJX3RHOVhNM0hUQjM3R3FwNlE0RFFacHR1ZWJENGk3bl9RTkROTnVYM2JsZXk5czNVa0lLRmIyOGJieWpqM2pVUnFNaDBRanBwNHhWVjRlVHRqTVNlWHJBRThRNExGM1FaT2dQT1hQamlk?oc=5",
+      "source": "AgroLatam",
+      "date": "2026-11-25"
+    },
+    {
+      "title": "USDA Feeder Cattle Summary: Mixed Auction Ranges, Futures and Beef Values - News and Statistics - IndexBox",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPNmJhUGN1RG55NmUtcTE5QTBCNzN1b29xb1k3QWpvX2dtb2xoSjk1aWRKeTkwWFU2elo3U1FIYkNybHA5WVllYng5QnMwQUdnZ09CM1RwQy1QUE5lUnBaTjRMRWZ3MEFxaWZEYzU4WmtpS3F1V1AxN1UzZHhZNTNoU01aMVEweXpSenFsbGZPcjUxakVmdFNOd252aW1vVEtDQmJ4UTEyOGM?oc=5",
+      "source": "IndexBox",
+      "date": "2026-11-25"
+    },
+    {
       "title": "Beef Prices Surge, but Americans Keep Buying. Will 2027 Change Everything? - AgroLatam",
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOVlZMR0tXTmNaZXRmaGk1d2ZRa3B4UTBRa1FJVFN3ZkdVWFhfWGtmWFBmVzg5V2pFMVVRa1dNNUlOY3FSWWxNS0FiUEY0Y1RFSEhRR0N4NWxfaHkyem5aUVhzdk5sY21ZdWdERDZ2WTlwMDY1TEZNVWNjMVZVTlhaM09IOHZwTjNJdjZOekJudmdYby1YOXpHVUlEWDJESXViaTZBQTQ3N3RDMUE?oc=5",
       "source": "AgroLatam",
       "date": "2026-11-24"
     },
     {
-      "title": "USDA Direct Slaughter Cattle Formula Base Report - November 23, 2026 - News and Statistics - IndexBox",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQRXVZaHl4cXQ3cnlZYnNFbTkxUmNyQm9ib2VWcGRhRkJoQVBwZTBjMUh5N2ZVT2FPcm5TNnk2MHdHOGpXTmZ1UHItT29WRWM0bkl3WXUtOHhPYk56S2Y4T1Nsekt3amc2bzhnRGpkYmxhVEZrMDQwTUlTbXZ0YVlRcmN0aXRWUGF6d25SdUFZYTlUVWJYZnRyeFZBSkdSaXdXelczQUpjTjlkRXpON0pTdURR?oc=5",
-      "source": "IndexBox",
-      "date": "2026-11-24"
+      "title": "Feeder cattle market: Buyers go hard as more rain builds - Beef Central",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOU0w0NU1Md0dKZ0cwMmRvcmxqZ1daOUxvdnFDeWtiM3pQY0VaRHViNk1NRnJ6bE1NWExzaElwSHZ4M01IX1VOS0FOV2tIbWN6UmN4VnVDUmc1XzhNZjFGbkxndUsxV3dqVm5fSjVuMTBiaU03aTJCUms4bF9Pb05pTnFSUHF0TEdzcUE1S0hQMElMOFhoV1BIT0p0VQ?oc=5",
+      "source": "Beef Central",
+      "date": "2026-11-23"
     },
     {
       "title": "USDA announces more tools, options for beef industry - Michigan Farm News",
@@ -276,12 +292,6 @@
       "date": "2026-11-19"
     },
     {
-      "title": "Record-Low Cattle Placements Again? USDA Report Could Shake Beef Markets - AgroLatam",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNMUdmVFRCMjkxd3FHSGlfTk5qY3NfX00wS21GSVFscmZ4TGNVT2YxSnBuUHJNTHJhREpyWWZuODZyRXZ2dVN4UHlSNGZmbUppcW5GM3pTV3ZyUTlHd3AwbEJWY3RlYjRyQ2E5NVJjVk5nQkZVUEdzWjBXWGlnVXVCZk9iN3dpdVliOXdLeWtZSQ?oc=5",
-      "source": "AgroLatam",
-      "date": "2026-11-19"
-    },
-    {
       "title": "Give gift of recognition: Nominate a Mid-Atlantic Master Farmer - Farm Progress",
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPQng3TGFCeTVRQVVaeGoybzJuRWJBVWFVWXh2UW9uYjhIS1JXNjBPMTZLdEdLNHhKc2FoVWozOXAxYnJ3dW0zSFlsSGM5RHU3VWw1cnRZRVgtTHR0V1d2NFE5dC1PbE5vWkRhZ3pXMXJ6RHJuUTVjVE94QnZOSjFOUUdyZmtldXd0cjA5a2FKMk5kaTNZMEN0dXd1T2ZPYnc?oc=5",
       "source": "Farm Progress",
@@ -298,12 +308,6 @@
       "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQRjQwN052d0RDczl6QW5obEYyZm1mampRZ280NGJHMW1QR09zUGtuQ01McGpsODhxbGktX0tpSDZ6bno1b1RJYUtmX19Md01OLWdkLTBBbkQ5M2VSd2lJRWh3UjMzOU1UQXpvYTI1c2dyNmVPN3lWZzlWbHBLTmdscXZNT2Q5U2RjUFFFMWl2VVYwMEoxdE9jR2ktZ2p0b18tajRRaDQ5UHZyMEF4Vjh0WGRSWHJIamdXdUlaZWYxQ0lTUF9ISHdEaERWUFhLQkg1RXZSakVCaUZvYUwtMUdrQTV4MWQ0Q1NESVdwNmJ6WQ?oc=5",
       "source": "USDA (.gov)",
       "date": "2026-10-20"
-    },
-    {
-      "title": "Unpriced Contracts: How Packers Weaken the Cash Cattle Market - Morning Ag Clips",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOTWxBTGpHTk1CTHgzMEFRNHR4ZkR3SXZHMnIzeW9tTGlvdzZxczVjQnFBN2xIbEl3YUlCek8zWDhSU29HTUphVk9nZXViUXFERVVncnlOeFZfS0tHdmhHbE1neWMtNFEwal90NjBoTks4aUtNZWhtMkRqU2hjdW5YSmRKby1QR01PMFJtVWo5SV82Si1sb05z?oc=5",
-      "source": "Morning Ag Clips",
-      "date": "2026-10-14"
     },
     {
       "title": "Mid-Atlantic Farmers Seek Early Fertilizer Price Protection Now - RFD-TV",
