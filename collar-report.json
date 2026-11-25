@@ -1,0 +1,33 @@
+{
+  "generated_at": "2026-11-25T20:32:01.815Z",
+  "window_days": 7,
+  "collars": {
+    "2-cell": {
+      "device_id": "dev:868531060199697",
+      "fixes": 567,
+      "last_seen": "2026-11-25T20:27:25+00:00",
+      "last_location": {
+        "lat": 37.7858825,
+        "lng": -77.22412109375
+      },
+      "battery_now": 4.3203125,
+      "battery_window_start": 4.3164062,
+      "battery_min": 4.2890625,
+      "battery_max": 4.3554688,
+      "drain_v_per_day": -0.0004884924519835778,
+      "projected_days_to_cutoff": null,
+      "cutoff_v": 3.3,
+      "distance_m_window": 12,
+      "distance_m_24h": 0,
+      "moving_recently": false
+    },
+    "3-cell": {
+      "device_id": "dev:868531063312784",
+      "fixes": 0
+    },
+    "4-cell": {
+      "device_id": "dev:868531063304930",
+      "fixes": 0
+    }
+  }
+}
