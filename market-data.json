@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26T20:19:05.054Z",
+  "updated": "2026-11-27T20:04:43.606Z",
   "series": [
     {
       "date": "2026-10-05",
@@ -244,6 +244,12 @@
   ],
   "news": [
     {
+      "title": "USDA Feeder Cattle Prices Mixed Across Regional Auctions on November 27, 2026 - News and Statistics - IndexBox",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNSXlsMlFsZF9FQTFIUGQxTHVsN3l4YUZfYkMtdEl0cHhuWmEzeHBralBCSVlGYVVjdVV6dTFXaDRlOXk2bDVoR1V1UFNGUXBwVlpVVDBsaGQtOWhxRWV1QU11M21LTDhObzdrS3JmSklfdVl1WWs5Q2Iza3RJYmdwRi1CV2hjQW02cVJOVmg1NHNuTDFVdXpiYnNDa0ZxSHZfekZLS2NUbw?oc=5",
+      "source": "IndexBox",
+      "date": "2026-11-27"
+    },
+    {
       "title": "Cattle Futures End Mixed in Chicago as U.S. Feedlot Supplies Tighten - AgroLatam",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOUEczdE92VXRWWlFrUkdVX2lkdUs5STY5di1nTVQ2cVpUZlBjZTlNeGlETUh4aWNGUmpyTjJqUU1YSEZJX3RHOVhNM0hUQjM3R3FwNlE0RFFacHR1ZWJENGk3bl9RTkROTnVYM2JsZXk5czNVa0lLRmIyOGJieWpqM2pVUnFNaDBRanBwNHhWVjRlVHRqTVNlWHJBRThRNExGM1FaT2dQT1hQamlk?oc=5",
       "source": "AgroLatam",
@@ -268,16 +274,16 @@
       "date": "2026-11-23"
     },
     {
-      "title": "USDA Boxed Beef Cutout Report for November 23, 2026 - News and Statistics - IndexBox",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOai1fdVZ3TGNIZ3BjZ1FlekFES0hkM1hMNmNMc09oR05BMnJfQ0JtSVEzU1BCYTl4Y0pnMTh0MXAwY19Zb00ySlEwaDQwSm43OHBTWGU0ZERvelA0b09yLS0xY0tLY0NUNnRFZkpMNGQ4WERvTlZCSnU2RnRfZEdCZk4wTjJBX0xPQklWRDZrZEVqNWs0NTdkNQ?oc=5",
-      "source": "IndexBox",
-      "date": "2026-11-23"
-    },
-    {
       "title": "USDA direct cattle prices - High Plains Journal",
       "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9Pd2ZTNjJKLUtUSFpTRXlrbFE3VHdwNEdNM21rUld1RUZXZnF3RjVnWWFKRFo3VG5YdUNlbjdRVGpYVUdTQnZiMG5ESzRwTGFtSjZWVjYwSjRIUXEtVnVqTjNmWnNSUQ?oc=5",
       "source": "High Plains Journal",
       "date": "2026-11-19"
+    },
+    {
+      "title": "Give gift of recognition: Nominate a Mid-Atlantic Master Farmer - Farm Progress",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPQng3TGFCeTVRQVVaeGoybzJuRWJBVWFVWXh2UW9uYjhIS1JXNjBPMTZLdEdLNHhKc2FoVWozOXAxYnJ3dW0zSFlsSGM5RHU3VWw1cnRZRVgtTHR0V1d2NFE5dC1PbE5vWkRhZ3pXMXJ6RHJuUTVjVE94QnZOSjFOUUdyZmtldXd0cjA5a2FKMk5kaTNZMEN0dXd1T2ZPYnc?oc=5",
+      "source": "Farm Progress",
+      "date": "2026-11-13"
     },
     {
       "title": "Op-Ed: Cattle Market Turmoil Threatens America’s Independent Producers - Morning Ag Clips",
@@ -286,16 +292,16 @@
       "date": "2026-11-07"
     },
     {
+      "title": "Beef Demand Growth Reshapes Fed Cattle Market Reporting - RFD-TV",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQZ01LQVNsZDhhOEl6Tlh3ODhkX3I2Y2VtRHF6T2tvczFGczlQRVlWVkk2RkNXbFdmZmhkNTFPTTE5S2hGUkFWbUVicGdKd1hYY0lnd1VyUWJjSUVpZk5uVE5QeDNSNHVad3pUU1hicVBESnl6MmtnekFPRFpCNG90SlpuVQ?oc=5",
+      "source": "RFD-TV",
+      "date": "2026-11-05"
+    },
+    {
       "title": "Following President Trump's Executive Orders, USDA Updates its Cash Cattle Market Reports to Advance Transparency - USDA (.gov)",
       "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQRjQwN052d0RDczl6QW5obEYyZm1mampRZ280NGJHMW1QR09zUGtuQ01McGpsODhxbGktX0tpSDZ6bno1b1RJYUtmX19Md01OLWdkLTBBbkQ5M2VSd2lJRWh3UjMzOU1UQXpvYTI1c2dyNmVPN3lWZzlWbHBLTmdscXZNT2Q5U2RjUFFFMWl2VVYwMEoxdE9jR2ktZ2p0b18tajRRaDQ5UHZyMEF4Vjh0WGRSWHJIamdXdUlaZWYxQ0lTUF9ISHdEaERWUFhLQkg1RXZSakVCaUZvYUwtMUdrQTV4MWQ0Q1NESVdwNmJ6WQ?oc=5",
       "source": "USDA (.gov)",
       "date": "2026-10-20"
-    },
-    {
-      "title": "Why USDA’s Proposed Heifer-Retention Insurance Could Distort the Cattle Market - Drovers Magazine",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPY1g5OERxdUNheURNUWZBZjR3dF9ocUpZRUhwaWxzeVZOaUpkN2x1QjhWa1JNbWpOa3RMRUpWS2ZEVnBUTUpQWTV5UHdacVNwTVZKRHBZa3hIdDhDT0VEVzg0UEsyZkMycDV0UTN4SlRzenFjRnJjdWpCZEQ1cVJ3V0hzcHpfQmFvdGZQYnduMnNmLVZteWhsbzhIVVktWmhwT3ozMA?oc=5",
-      "source": "Drovers Magazine",
-      "date": "2026-10-19"
     },
     {
       "title": "Unpriced Contracts: How Packers Weaken the Cash Cattle Market - Morning Ag Clips",
@@ -308,12 +314,6 @@
       "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPUHZ6ekdlTEJCeW5tVnM3c3h2YUhNQk5fT1NaWnRDanFmNWNXNHowVnNPMjlxSU1mWmp5V1ZueEkwMXBybHZ5VFpqdktYeXlBYU5JM0VVdWFQMTB5M2NNMndaOEU1VGFVN3FGY19wRzA5VE9meE5sYndIejl0YTI3dVB4UFU1bEZ2SHRCekln?oc=5",
       "source": "RFD-TV",
       "date": "2026-10-04"
-    },
-    {
-      "title": "Strong Mid-Atlantic Corn Basis Supports Early Harvest Returns - RFD-TV",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNNUt3VExRMlNic0FpQ3RPbUNTZlZUd1lNMjV1MmlaM0cwTV9QRTRja2NmYk4tNHFvWk1KczV4YlZSb3RKOFNZdkUtLXBza0VUT2MxaHhpNWpjbkVKSEtpT0tfcklUM3A5dEEycUhwUUxnZWowdGZrZjR3a2VXQmtRTFdQRGJfakM0TzdR?oc=5",
-      "source": "RFD-TV",
-      "date": "2026-10-01"
     }
   ]
 }
